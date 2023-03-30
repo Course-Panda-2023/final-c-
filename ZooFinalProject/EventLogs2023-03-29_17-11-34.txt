@@ -1,0 +1,231 @@
+Lion has been added to the zoo.
+Elephant has been added to the zoo.
+Zebra has been added to the zoo.
+Giraffe has been added to the zoo.
+Kangaroo has been added to the zoo.
+Dolphin has been added to the zoo.
+Goldfish has been added to the zoo.
+Shark has been added to the zoo.
+Whale has been added to the zoo.
+Abu Nafha has been added to the zoo.
+Eagle has been added to the zoo.
+Hawk has been added to the zoo.
+Vulture has been added to the zoo.
+Owl has been added to the zoo.
+Pelican has been added to the zoo.
+Crocodile has been added to the zoo.
+Hippo has been added to the zoo.
+Turtle has been added to the zoo.
+Frog has been added to the zoo.
+Duck has been added to the zoo.
+Lion has been added to the zoo.
+Elephant has been added to the zoo.
+Zebra has been added to the zoo.
+Dolphin has been added to the zoo.
+Shark has been added to the zoo.
+Eagle has been added to the zoo.
+Worker John has entered the zoo and was assigned to Lion.
+Worker Sarah has entered the zoo and was assigned to Elephant.
+Worker Tom has entered the zoo and was assigned to Zebra.
+Worker Kate has entered the zoo and was assigned to Shark.
+Worker Mike has entered the zoo and was assigned to Lion.
+Worker Kelly has entered the zoo and was assigned to Dolphin.
+Worker Alex has entered the zoo and was assigned to Eagle.
+Worker David has entered the zoo and was assigned to Shark.
+Worker Jake has entered the zoo and was assigned to Lion.
+Worker Maggie has entered the zoo and was assigned to Dolphin.
+Worker Bob has entered the zoo and was assigned to Shark.
+Worker Alice has entered the zoo and was assigned to Zebra.
+A new visitor has entered! Current num of visitors: 1
+A new visitor has entered! Current num of visitors: 2
+A new visitor has entered! Current num of visitors: 3
+A new visitor has entered! Current num of visitors: 4
+A new visitor has entered! Current num of visitors: 5
+A new visitor has entered! Current num of visitors: 6
+A new visitor has entered! Current num of visitors: 7
+A new visitor has entered! Current num of visitors: 8
+A new visitor has entered! Current num of visitors: 9
+A new visitor has entered! Current num of visitors: 10
+A new visitor has entered! Current num of visitors: 11
+A new visitor has entered! Current num of visitors: 12
+A new visitor has entered! Current num of visitors: 13
+A new visitor has entered! Current num of visitors: 14
+A new visitor has entered! Current num of visitors: 15
+A new visitor has entered! Current num of visitors: 16
+A new visitor has entered! Current num of visitors: 17
+A new visitor has entered! Current num of visitors: 18
+A new visitor has entered! Current num of visitors: 19
+A new visitor has entered! Current num of visitors: 20
+A new visitor has entered! Current num of visitors: 21
+A new visitor has entered! Current num of visitors: 22
+A new visitor has entered! Current num of visitors: 23
+A new visitor has entered! Current num of visitors: 24
+A new visitor has entered! Current num of visitors: 25
+A new visitor has entered! Current num of visitors: 26
+A new visitor has entered! Current num of visitors: 27
+A new visitor has entered! Current num of visitors: 28
+A new visitor has entered! Current num of visitors: 29
+A new visitor has entered! Current num of visitors: 30
+A new visitor has entered! Current num of visitors: 31
+A new visitor has entered! Current num of visitors: 32
+A new visitor has entered! Current num of visitors: 33
+A new visitor has entered! Current num of visitors: 34
+A new visitor has entered! Current num of visitors: 35
+A new visitor has entered! Current num of visitors: 36
+A new visitor has entered! Current num of visitors: 37
+A new visitor has entered! Current num of visitors: 38
+A new visitor has entered! Current num of visitors: 39
+A new visitor has entered! Current num of visitors: 40
+A new visitor has entered! Current num of visitors: 41
+A new visitor has entered! Current num of visitors: 42
+A new visitor has entered! Current num of visitors: 43
+A new visitor has entered! Current num of visitors: 44
+A new visitor has entered! Current num of visitors: 45
+Tour day started
+Tour number 1 started at Sea
+Sarah, Ground, Start
+Tour number 2 started at Sea
+Delay for 10 seconds
+Bob, Sea, Start
+Tour number 3 started at Sea
+Tour 4 ended at Sea
+Bob, Sea, End
+Tour number 4 started at Sea
+Sarah, Ground, End
+Kelly, Ground, Start
+Tour number 5 started at Sea
+Tour 6 ended at Sea
+Delay for 5 seconds
+John, Ground, Start
+Delay for 10 seconds
+Tour number 6 started at Sea
+Tour 7 ended at Sea
+Alex, Ground, Start
+David, Air, Start
+Delay for 10 seconds
+Kelly, Ground, End
+David, Ground, Start
+Delay for 5 seconds
+John, Sea, Start
+Delay for 10 seconds
+Alex, Ground, End
+David, Air, End
+Tour number 7 started at Sea
+Tour 8 ended at Sea
+David, Ground, End
+John, Ground, End
+Maggie, Air, Start
+Tour number 8 started at Sea
+Tour 9 ended at Sea
+Maggie, Sea, Start
+Maggie, Air, End
+Sarah, Mixed, Start
+Maggie, Sea, End
+Delay for 10 seconds
+John, Sea, End
+Kelly, Mixed, Start
+Maggie, Ground, Start
+Alice, Ground, Start
+Delay for 5 seconds
+Maggie, Ground, End
+Alice, Ground, End
+Kate, Air, Start
+Bob, Mixed, Start
+Tom, Sea, Start
+Kelly, Mixed, End
+Alice, Mixed, Start
+Delay for 20 seconds
+Bob, Mixed, End
+Jake, Air, Start
+Alice, Mixed, End
+Sarah, Mixed, End
+Jake, Air, End
+Kate, Air, End
+Tom, Sea, End
+Tour number 9 started at Sea
+Tour 10 ended at Sea
+David, Sea, Start
+Delay for 5 seconds
+Alex, Mixed, Start
+David, Sea, End
+Jake, Mixed, Start
+Delay for 5 seconds
+Tour number 10 started at Sea
+Tour 11 ended at Sea
+Sarah, Sea, Start
+Jake, Mixed, End
+Delay for 10 seconds
+Mike, Ground, Start
+Bob, Air, Start
+Sarah, Air, Start
+Alex, Mixed, End
+Bob, Air, End
+Delay for 15 seconds
+Mike, Ground, End
+Kelly, Air, Start
+Sarah, Sea, End
+Delay for 5 seconds
+Sarah, Air, End
+Tour number 11 started at Sea
+Tour 12 ended at Sea
+Kelly, Air, End
+Tom, Ground, Start
+Delay for 10 seconds
+Tour number 12 started at Sea
+Tour 13 ended at Sea
+Tour number 13 started at Sea
+Tour 14 ended at Sea
+Tour number 14 started at Sea
+Tour 15 ended at Sea
+Tom, Ground, End
+Bob, Ground, Start
+Tom, Air, Start
+Bob, Ground, End
+Delay for 10 seconds
+Tour number 15 started at Sea
+Tour 16 ended at Sea
+Kelly, Sea, Start
+Alex, Air, Start
+John, Air, Start
+Kate, Sea, Start
+Tour number 16 started at Sea
+Tour 17 ended at Sea
+Delay for 30 seconds
+Mike, Sea, Start
+Jake, Sea, Start
+Delay for 5 seconds
+Kelly, Sea, End
+Jake, Ground, Start
+Tom, Air, End
+Alex, Air, End
+David, Mixed, Start
+Jake, Sea, End
+Jake, Ground, End
+Delay for 5 seconds
+Mike, Sea, End
+Mike, Air, Start
+Kate, Ground, Start
+David, Mixed, End
+John, Air, End
+John, Mixed, Start
+Tom, Mixed, Start
+Kate, Sea, End
+Delay for 35 seconds
+Mike, Air, End
+Mike, Mixed, Start
+Delay for 5 seconds
+Kate, Ground, End
+John, Mixed, End
+Tom, Mixed, End
+Alice, Sea, Start
+Alex, Sea, Start
+Alice, Sea, End
+Kate, Mixed, Start
+Mike, Mixed, End
+Alice, Air, Start
+Delay for 15 seconds
+Alice, Air, End
+Maggie, Mixed, Start
+Alex, Sea, End
+Tour day finished
+total profit made: 5050

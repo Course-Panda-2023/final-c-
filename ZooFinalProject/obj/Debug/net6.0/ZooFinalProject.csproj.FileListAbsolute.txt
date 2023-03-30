@@ -1,0 +1,15 @@
+C:\Users\guyal.DESKTOP-S2VGE0F\Source\Repos\ZooFinalProject\ZooFinalProject\bin\Debug\net6.0\ZooFinalProject.exe
+C:\Users\guyal.DESKTOP-S2VGE0F\Source\Repos\ZooFinalProject\ZooFinalProject\bin\Debug\net6.0\ZooFinalProject.deps.json
+C:\Users\guyal.DESKTOP-S2VGE0F\Source\Repos\ZooFinalProject\ZooFinalProject\bin\Debug\net6.0\ZooFinalProject.runtimeconfig.json
+C:\Users\guyal.DESKTOP-S2VGE0F\Source\Repos\ZooFinalProject\ZooFinalProject\bin\Debug\net6.0\ZooFinalProject.dll
+C:\Users\guyal.DESKTOP-S2VGE0F\Source\Repos\ZooFinalProject\ZooFinalProject\bin\Debug\net6.0\ZooFinalProject.pdb
+C:\Users\guyal.DESKTOP-S2VGE0F\Source\Repos\ZooFinalProject\ZooFinalProject\obj\Debug\net6.0\ZooFinalProject.csproj.AssemblyReference.cache
+C:\Users\guyal.DESKTOP-S2VGE0F\Source\Repos\ZooFinalProject\ZooFinalProject\obj\Debug\net6.0\ZooFinalProject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\guyal.DESKTOP-S2VGE0F\Source\Repos\ZooFinalProject\ZooFinalProject\obj\Debug\net6.0\ZooFinalProject.AssemblyInfoInputs.cache
+C:\Users\guyal.DESKTOP-S2VGE0F\Source\Repos\ZooFinalProject\ZooFinalProject\obj\Debug\net6.0\ZooFinalProject.AssemblyInfo.cs
+C:\Users\guyal.DESKTOP-S2VGE0F\Source\Repos\ZooFinalProject\ZooFinalProject\obj\Debug\net6.0\ZooFinalProject.csproj.CoreCompileInputs.cache
+C:\Users\guyal.DESKTOP-S2VGE0F\Source\Repos\ZooFinalProject\ZooFinalProject\obj\Debug\net6.0\ZooFinalProject.dll
+C:\Users\guyal.DESKTOP-S2VGE0F\Source\Repos\ZooFinalProject\ZooFinalProject\obj\Debug\net6.0\refint\ZooFinalProject.dll
+C:\Users\guyal.DESKTOP-S2VGE0F\Source\Repos\ZooFinalProject\ZooFinalProject\obj\Debug\net6.0\ZooFinalProject.pdb
+C:\Users\guyal.DESKTOP-S2VGE0F\Source\Repos\ZooFinalProject\ZooFinalProject\obj\Debug\net6.0\ZooFinalProject.genruntimeconfig.cache
+C:\Users\guyal.DESKTOP-S2VGE0F\Source\Repos\ZooFinalProject\ZooFinalProject\obj\Debug\net6.0\ref\ZooFinalProject.dll
