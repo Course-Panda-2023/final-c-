@@ -1,0 +1,14 @@
+3/30/2023 5:58:05 PM: Tours start to Land Zone and Amphibia Zone
+3/30/2023 5:58:06 PM: Employee Assaf starts at 1 working at Birds Zone
+3/30/2023 5:58:06 PM: Employee Raz starts at 1 working at Amphibia Zone
+3/30/2023 5:58:06 PM: Employee Guy starts at 1 working at Sea Zone
+3/30/2023 5:58:06 PM: Employee Liav starts at 1 working at Sea Zone
+3/30/2023 5:58:08 PM: Employee Eyal starts at 3 working at Land Zone
+3/30/2023 5:58:08 PM: Employee Amir starts at 3 working at Land Zone
+3/30/2023 5:58:10 PM: Doctor Raz the employee ends at 6
+3/30/2023 5:58:10 PM: Doctor Assaf The Doc ends at 6
+3/30/2023 5:58:10 PM: Doctor Amit the Tal ends at 8
+3/30/2023 5:58:10 PM: Doctor Guy the coder ends at 6
+3/30/2023 5:58:10 PM: Doctor Eyal the nice ends at 8
+3/30/2023 5:58:10 PM: Doctor Liav ends at 6
+3/30/2023 5:58:15 PM: Tours end to Land Zone and Amphibia Zone

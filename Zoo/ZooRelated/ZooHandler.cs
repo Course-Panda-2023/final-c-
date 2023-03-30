@@ -23,18 +23,24 @@ namespace Zoo.ZooRelated
 
         public List<Visitor> visitors = new();
 
+        public Queue<GuidedTour> guidedToursQueue = new(); 
+
         public ZooHandler(List<ZooZone> zones, List<Employee> employees, List<GuidedTour> guidedTours, List<Visitor> Visitors)
         {
             this.zones = zones;
             this.employees = employees;
             this.guidedTours = guidedTours;
+            foreach (var guidedTour in guidedTours) 
+            { 
+                guidedToursQueue.Enqueue(guidedTour);
+            }
             this.visitors = Visitors;
         }
 
         public void RunAllTours()
         {
             List<Thread> threads = new List<Thread>();
-            foreach (GuidedTour GuidedTour in guidedTours) 
+            foreach (GuidedTour GuidedTour in guidedTours)
             {
                 threads.Add(GuidedTour.touring);
             }
@@ -42,6 +48,7 @@ namespace Zoo.ZooRelated
             foreach (Thread thread in threads)
             {
                 thread.Start();
+                thread.Join();
             }
         }
     }
