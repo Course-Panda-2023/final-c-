@@ -13,25 +13,34 @@ namespace Zoo
         protected int workingInterval;
         protected List<int> workingTimes;
         protected List<int> pastAreas;
+        protected int ticketCost;
+        private Areas area;
 
         public List<int> WorkingTimes { get { return workingTimes; } }
         public int WorkingInterval { get { return workingInterval; } }
+
+        public int TicketCost { get { return workingInterval; } }
         public Areas CurrentArea { get { return currentArea; } set { currentArea = value; } }
 
-        public Worker(Areas area)
+        public Worker(Areas area, bool isBonus)
         {
             currentArea = area;
             workingTimes = new List<int>();
             pastAreas = new List<int>();
-            SetWorkTimes();
+            SetWorkTimes(isBonus);
         }
 
-        public void SetWorkTimes()
+        public void SetWorkTimes(bool isBonus)
         {
             Random rnd = new Random();
-            const int numOfAreas = 4;
+            //const int numOfAreas = 4;
+            int numOfAreasToWork = 4;
+            if (isBonus)
+            {
+                numOfAreasToWork = 2;
+            }
             int timeCounter = 0;
-            while (timeCounter <= numOfAreas)
+            while (timeCounter <= numOfAreasToWork)
             {
                 bool TimeIsCorrect = true;
                 int time = rnd.Next(0, workDay - workingInterval);

@@ -8,9 +8,10 @@ namespace Zoo
 {
     internal class Doctor : NonCleaners
     {
-        public Doctor(Animal currentAnimal, Areas area) : base(currentAnimal, area)
+        public Doctor(Animal currentAnimal, Areas area, bool isBonus) : base(currentAnimal, area, isBonus)
         {
             workingInterval = 5;
+            ticketCost = 20;
         }
     }
 }

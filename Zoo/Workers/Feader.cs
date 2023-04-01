@@ -8,9 +8,10 @@ namespace Zoo
 {
     internal class Feader : NonCleaners
     {
-        public Feader(Animal currentAnimal, Areas area) : base(currentAnimal, area)
+        public Feader(Animal currentAnimal, Areas area, bool isBonus) : base(currentAnimal, area, isBonus)
         {
             workingInterval = 10;
+            ticketCost = 100;
         }
     }
 }

@@ -11,7 +11,7 @@ namespace Zoo
         protected Animal currentAnimal;
         public Animal CurrentAnimal { get { return currentAnimal; } set { currentAnimal = value; } }
 
-        protected NonCleaners(Animal currentAnimal, Areas area) : base(area)
+        protected NonCleaners(Animal currentAnimal, Areas area, bool isBonus) : base(area, isBonus)
         {
             this.currentAnimal = currentAnimal;
         }

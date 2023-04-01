@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace Zoo
 {
-    internal class Cleaner : Worker
+    public class Frog : MixedAnimal
     {
-        public Cleaner(Areas area, bool isBonus) : base(area, isBonus)
+        public Frog(string name) : base(name)
         {
-            workingInterval = 2;
-            ticketCost = 30;
+            Sound = "Frog sound";
         }
     }
 }

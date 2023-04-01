@@ -1,8 +1,10 @@
-﻿using Zoo;
+﻿using System.ComponentModel.DataAnnotations;
+using Zoo;
 
 List<Animal> animals = new List<Animal>();
 List<Worker> workers = new List<Worker>();
 
+bool isBonus = true;
 Lion l = new Lion("Harry");
 Alligator a = new Alligator("Charles");
 Dolphin d = new Dolphin("Dolly");
@@ -12,17 +14,22 @@ animals.Add(l);
 animals.Add(a);
 animals.Add(d);
 animals.Add(v);
+animals.Add(new GoldFish("Goldie"));
+animals.Add(new Elephant("Elle"));
+animals.Add(new Hippopotumus("Grey"));
+animals.Add(new Turtle("Henry"));
+animals.Add(new Shark("Cherry"));
+animals.Add(new Zebra("Crosswalk"));
+animals.Add(new Eagle("America"));
+animals.Add(new Hawk("Harold"));
 
-Cleaner c = new Cleaner(Areas.Land);
-Doctor dr = new Doctor(v, Areas.Sea);
-Feader f = new Feader(l, Areas.Mixed);
 
-workers.Add(c);
-workers.Add(dr);
-workers.Add(f);
+workers.Add(new Cleaner(Areas.Mixed, isBonus));
+workers.Add(new Doctor(d, Areas.Mixed, isBonus));
+workers.Add(new Feader(a, Areas.Sky, isBonus));
 
 
-//CHANGE CHECKZOO TO 3 INSTEAD 1
+
 MainZoo z = new MainZoo(animals, workers);
 
-z.Run();
+z.Run(isBonus);

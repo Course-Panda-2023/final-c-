@@ -23,6 +23,7 @@ namespace Zoo
         private Dictionary<int, List<Worker>> workersDictFinish;
         private List<Tour> tours;
         private int tourId;
+        private int zooIncome;
 
 
         public event notify zooEvents;
@@ -40,7 +41,7 @@ namespace Zoo
                 AddWorkersToDicts();
                 zooEvents += new notify(PrintStartAndFinish);
                 zooEvents += new notify(AddAndRemoveTours);
-
+                zooIncome = 0;
                 Manager.LogEvents("Zoo created.");
             }
             else
@@ -82,7 +83,7 @@ namespace Zoo
                 }
                 tempAnimals.Add(animal);
             }
-            return landCounter >= 1 && seaCounter >= 1 && skyCounter >= 1 && mixCounter >= 1;
+            return landCounter >= 3 && seaCounter >= 3 && skyCounter >= 3 && mixCounter >= 3;
         }
 
         public void AddWorkersToDicts()
@@ -131,8 +132,8 @@ namespace Zoo
                 {
                     if (IsAreaFree(t.Area) && t.IsPaused)
                     {
-                        Thread.Sleep(50);
                         t.ResumeTour(time);
+                        //Thread.Sleep(50);
                     }
                 }
             }
@@ -151,8 +152,8 @@ namespace Zoo
                     {
                         if (t.Area == w.CurrentArea && !t.IsPaused && !(w is Feader))
                         {
-                            //Thread.Sleep(50);
                             t.PauseTour(time, w);
+                            //Thread.Sleep(50);
                         }
                     }
                 }
@@ -187,6 +188,15 @@ namespace Zoo
         {
             const int numOfAreas = 4;
             const int maxTimeToStartTour = workDay - tourTime;
+            const int numOfVisitors = 5;
+
+            Random r = new Random();
+            int visitorsInTour = r.Next(numOfVisitors - 2, numOfVisitors + 2);
+            List<Visitor> visitors = new List<Visitor>();
+            for(int i = 0; i < visitorsInTour; i++)
+            {
+                visitors.Add(new Visitor());
+            }
             List<Tour> toursToRemove = new List<Tour>();
             int tourAreaCounter = 0;
             bool AddTour = true;
@@ -207,9 +217,10 @@ namespace Zoo
             }
             if (AddTour && tourAreaCounter < 2 && time <= maxTimeToStartTour)
             {
-                Tour tour = new Tour(area, time, tourId);
+                Tour tour = new Tour(area, time, tourId, visitors);
                 tourId++;
                 tours.Add(tour);
+                zooIncome += visitorsInTour * GetTicketCost(area);
             }
             foreach(Tour t in toursToRemove)
             {
@@ -232,15 +243,36 @@ namespace Zoo
             return true;
         }
 
-        public void Run()
+        public int GetTicketCost(Areas area)
         {
-            //CHANGE LATER TO SECONDS.
-            for(int i = 0; i < workDay; i++)
+            const int regularTicket = 50;
+
+            int ticketCost = 0;
+            foreach(Worker worker in workers)
+            {
+                if(worker.CurrentArea == area)
+                {
+                    ticketCost = Math.Max(worker.TicketCost, ticketCost);
+                }
+            }
+            return ticketCost == 0 ? regularTicket : ticketCost;
+        }
+
+        public void Run(bool IsBonus)
+        {
+            for (int i = 0; i < workDay; i++)
             {
                 time = i + 1;
                 Manager.LogEvents($"time: {i + 1}");
                 zooEvents.Invoke(i + 1);
                 Thread.Sleep(100);
+                Manager.LogEvents("");
+            }
+            foreach (Tour tour in tours)
+                tour.T.Join();
+            if (IsBonus)
+            {
+                Manager.LogEvents($"Zoo income today: {zooIncome}");
             }
         }
     }
