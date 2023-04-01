@@ -34,6 +34,13 @@ namespace CSharp_Zoo.Zoo
             _director = director;
         }
 
+        public void AddWorker(ZooWorker worker)
+        {
+            if (!_workers.Contains(worker))
+            {
+                _workers.Add(worker);
+            }
+        }
         public void AddAnimal(Animal animal)
         {
             if (!_animals.Contains(animal))

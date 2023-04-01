@@ -8,6 +8,8 @@ using CSharp_Zoo.Animals.MixedZone;
 using CSharp_Zoo.Zoo;
 using CSharp_Zoo.ZooWorkers;
 
+
+//Running test code
 /*Console.WriteLine("Hello, World!");
 Animal eagle = new Eagle("Fasty");
 Animal lion = new Lion("Liony");
@@ -16,6 +18,8 @@ Console.WriteLine(eagle.GetZone());
 Console.WriteLine(lion.GetZone());
 lion.MakeSound();*/
 
+
+//Running test code
 Director zooDirector = Director.Instance;
 Zoo zoo = new Zoo(zooDirector);
 zoo.AddAnimal(new Eagle("Fasty"));
@@ -30,4 +34,12 @@ zoo.AddAnimal(new Rat("Ratty"));
 zoo.AddAnimal(new PolarBear("Bearry"));
 zoo.AddAnimal(new Crocodile("Crocody"));
 zoo.AddAnimal(new Hippopotamus("Hippy"));
+
+const int numWorkers = 10; 
+for (int i = 0; i < numWorkers; i++)
+{
+    zoo.AddWorker(new Doctor());
+    zoo.AddWorker(new Feeder());
+    zoo.AddWorker(new Cleaner());
+}
 
