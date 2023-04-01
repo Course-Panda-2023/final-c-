@@ -131,8 +131,8 @@ namespace Zoo
                 {
                     if (IsAreaFree(t.Area) && t.IsPaused)
                     {
+                        Thread.Sleep(50);
                         t.ResumeTour(time);
-                        //Thread.Sleep(50);
                     }
                 }
             }
@@ -237,7 +237,7 @@ namespace Zoo
             //CHANGE LATER TO SECONDS.
             for(int i = 0; i < workDay; i++)
             {
-                time = i+1;
+                time = i + 1;
                 Manager.LogEvents($"time: {i + 1}");
                 zooEvents.Invoke(i + 1);
                 Thread.Sleep(100);
