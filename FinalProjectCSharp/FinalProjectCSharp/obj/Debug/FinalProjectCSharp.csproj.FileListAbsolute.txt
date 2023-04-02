@@ -1,0 +1,8 @@
+C:\Users\mamag3\Desktop\AmitNadam\FinalProjectCSharp\FinalProjectCSharp\bin\Debug\FinalProjectCSharp.exe.config
+C:\Users\mamag3\Desktop\AmitNadam\FinalProjectCSharp\FinalProjectCSharp\bin\Debug\FinalProjectCSharp.exe
+C:\Users\mamag3\Desktop\AmitNadam\FinalProjectCSharp\FinalProjectCSharp\bin\Debug\FinalProjectCSharp.pdb
+C:\Users\mamag3\Desktop\AmitNadam\FinalProjectCSharp\FinalProjectCSharp\obj\Debug\FinalProjectCSharp.csproj.AssemblyReference.cache
+C:\Users\mamag3\Desktop\AmitNadam\FinalProjectCSharp\FinalProjectCSharp\obj\Debug\FinalProjectCSharp.csproj.SuggestedBindingRedirects.cache
+C:\Users\mamag3\Desktop\AmitNadam\FinalProjectCSharp\FinalProjectCSharp\obj\Debug\FinalProjectCSharp.csproj.CoreCompileInputs.cache
+C:\Users\mamag3\Desktop\AmitNadam\FinalProjectCSharp\FinalProjectCSharp\obj\Debug\FinalProjectCSharp.exe
+C:\Users\mamag3\Desktop\AmitNadam\FinalProjectCSharp\FinalProjectCSharp\obj\Debug\FinalProjectCSharp.pdb
