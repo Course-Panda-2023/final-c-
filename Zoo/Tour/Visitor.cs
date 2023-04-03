@@ -1,13 +1,12 @@
 ﻿using Zoo.Utils.Enum;
-using System;
 
 namespace Zoo.Tour
 {
     internal class Visitor
     {
-        public string Name { get; init; }
+        public string? Name { get; init; }
 
-        Dictionary<ZooZonesType, string> places = new()
+        private readonly Dictionary<ZooZonesType, string> places = new()
         {
             { ZooZonesType.BirdZone, "Birds Zone" },
             { ZooZonesType.OrdinaryLandZone, "Land Zone" },

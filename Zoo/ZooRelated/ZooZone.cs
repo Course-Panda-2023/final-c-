@@ -12,15 +12,34 @@ namespace Zoo.ZooRelated
 
         public string? Location { get; set; }
 
-        public ZooZonesType type { get; }
+        public ZooZonesType Type { get; }
 
 
         public List<Animal>? Animals;
 
 
-        public ZooZone(ZooZonesType type)
+        public ZooZone(List<Animal> animals)
         {
-            this.type = type;
+            CheckIfAnimalsAreDistinct(animals);
+
+            CheckIfForEachZoneMoreAtLeastThreeAnimals(animals);
+
+            CheckIfAnimalRelatedToThisZone(animals);
+
+            Animals = animals;
+        }
+
+        public ZooZone(List<Animal> animals, ZooZonesType type)
+        {
+            CheckIfAnimalsAreDistinct(animals);
+
+            CheckIfForEachZoneMoreAtLeastThreeAnimals(animals);
+
+            CheckIfAnimalRelatedToThisZone(animals);
+
+            Animals = animals;
+
+            this.Type = type;
         }
 
         private void CheckIfThereAreTwoOrMoreAnimals(List<Animal> animals, Animal Animal)
@@ -59,37 +78,14 @@ namespace Zoo.ZooRelated
 
         private void CheckIfAnimalRelatedToThisZone(List<Animal> animals)
         {
-            foreach(var animal in animals)
+            foreach (var animal in animals)
             {
-                if (animal.GrowingUpZone == type)
-                    throw new AnimalDoesNotRelatedToException($"Animal from Race {animal.RaceName} are not related to zon {type}" +
+                if (animal.GrowingUpZone == Type)
+                    throw new AnimalDoesNotRelatedToException($"Animal from Race {animal.RaceName} are not related to zon {Type}" +
                         $"its zone is {animal.GrowingUpZone}");
             }
         }
 
-        public ZooZone(List<Animal> animals)
-        {
-            CheckIfAnimalsAreDistinct(animals);
-
-            CheckIfForEachZoneMoreAtLeastThreeAnimals(animals);
-
-            CheckIfAnimalRelatedToThisZone(animals);
-
-            Animals = animals;
-        }
-
-        public ZooZone(List<Animal> animals, ZooZonesType type)
-        {
-            CheckIfAnimalsAreDistinct(animals);
-
-            CheckIfForEachZoneMoreAtLeastThreeAnimals(animals);
-
-            CheckIfAnimalRelatedToThisZone(animals);
-
-            Animals = animals;
-
-            this.type = type;
-        }
 
         public void MessInZooAllAnimals()
         {

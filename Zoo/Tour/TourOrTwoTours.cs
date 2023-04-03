@@ -1,12 +1,14 @@
 ﻿using System.Collections;
-using System.Xml.Linq;
 using Zoo.EventLogger;
 using Zoo.Utils.CustomException;
 using Zoo.Utils.Enum;
 
 namespace Zoo.Tour
 {
-    internal class GuidedTour
+    /// <summary>
+    /// class represents one tour or two tours at the same time
+    /// </summary>
+    internal class TourOrTwoTours
     {
         public Thread touring;
 
@@ -82,7 +84,7 @@ namespace Zoo.Tour
             }
         }
 
-        public GuidedTour(List<TourPlace> places)
+        public TourOrTwoTours(List<TourPlace> places)
         {
             CheckIfTourCanBeParallel(places);
             this.places = places;
@@ -90,33 +92,45 @@ namespace Zoo.Tour
             touring = new Thread(ActivateTour);
         }
 
+        private void TourStart()
+        {
+            if (places.Count == 1)
+            {
+                Console.WriteLine($"Tour starts to {places[0]} ");
+                EventLoggerSingleton.GetInstance().LogIntoEvent($"Tour starts to {places[0]} ");
+                return;
+            }
+
+            Console.WriteLine($"Tours start to {places[0]} and {places[1]}");
+            EventLoggerSingleton.GetInstance().LogIntoEvent($"Tours start to {places[0]} and {places[1]}");
+
+        }
+
+        private void TourEnd()
+        {
+            if (places.Count == 1)
+            {
+                Console.WriteLine($"Tour ends to {places[0]} ");
+                EventLoggerSingleton.GetInstance().LogIntoEvent($"Tour ends to {places[0]} ");
+                return;
+            }
+
+            Console.WriteLine($"Tours end to {places[0]} and {places[1]}");
+            EventLoggerSingleton.GetInstance().LogIntoEvent($"Tours end to {places[0]} and {places[1]}");
+
+        }
+
+
+
         private void ActivateTour()
         {
             Thread thread = new(() =>
             {
-                if (places.Count == 1)
-                {
-                    Console.WriteLine($"Tour starts to {places[0]} ");
-                    EventLoggerSingleton.GetInstance().LogIntoEvent($"Tour starts to {places[0]} ");
-                }
-
-                else
-                {
-                    Console.WriteLine($"Tours start to {places[0]} and {places[1]}");
-                    EventLoggerSingleton.GetInstance().LogIntoEvent($"Tours start to {places[0]} and {places[1]}");
-                }
-                Thread.Sleep(10000);
-
-                if (places.Count == 1)
-                {
-                    Console.WriteLine($"Tour ends to {places[0]} ");
-                    EventLoggerSingleton.GetInstance().LogIntoEvent($"Tour ends to {places[0]} ");
-                }
-                else
-                {
-                    Console.WriteLine($"Tours end to {places[0]} and {places[1]}");
-                    EventLoggerSingleton.GetInstance().LogIntoEvent($"Tours end to {places[0]} and {places[1]}");
-                }
+                TourStart();
+                int TenSecondsInMili = 10000;
+                // each tour is 10 seconds
+                Thread.Sleep(TenSecondsInMili);
+                TourEnd();
             });
             thread.Start();
         }

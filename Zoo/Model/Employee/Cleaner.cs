@@ -1,7 +1,4 @@
-﻿using System.Runtime.CompilerServices;
-using Zoo.EventLogger;
-using Zoo.Model.Animals;
-using Zoo.Utils.Enum;
+﻿using Zoo.EventLogger;
 
 namespace Zoo.Model.Employee
 {
@@ -31,7 +28,7 @@ namespace Zoo.Model.Employee
                 Thread.Sleep(args.DayStartingTime);
                 Thread.Sleep(args.StartTime * 1000);
                 string message = $"Doctor {args.EmployeeName} ends at {args.StartTime + args.DayStartingTime}";
-                
+
                 Console.WriteLine(message);
                 EventLoggerSingleton.GetInstance().LogIntoEvent(message);
             });

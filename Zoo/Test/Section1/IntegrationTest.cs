@@ -1,8 +1,8 @@
-﻿using Zoo.Model.Animals.Amphibia;
+﻿using Zoo.Model.Animals;
+using Zoo.Model.Animals.Amphibia;
 using Zoo.Model.Animals.Bird;
 using Zoo.Model.Animals.Land;
 using Zoo.Model.Animals.SeaCreature;
-using Zoo.Model.Animals;
 using Zoo.ZooRelated;
 
 namespace Zoo.Test.Section1

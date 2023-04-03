@@ -4,7 +4,7 @@ namespace Zoo.Tour
 {
     internal class TourPlace
     {
-        Dictionary<ZooZonesType, string> places = new()
+        private readonly Dictionary<ZooZonesType, string> places = new()
         {
             { ZooZonesType.BirdZone, "Birds Zone" },
             { ZooZonesType.OrdinaryLandZone, "Land Zone" },

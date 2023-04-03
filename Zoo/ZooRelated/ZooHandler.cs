@@ -1,8 +1,4 @@
-﻿using System.Runtime.InteropServices;
-using Zoo.Utils.CustomException;
-using Zoo.Model.Animals;
-using Zoo.Utils.Enum;
-using Zoo.Model.Employee;
+﻿using Zoo.Model.Employee;
 using Zoo.Tour;
 
 namespace Zoo.ZooRelated
@@ -18,19 +14,19 @@ namespace Zoo.ZooRelated
 
         public List<EventHandler> employyeesEnds = new();
 
-        public List<GuidedTour> guidedTours = new();
+        public List<TourOrTwoTours> guidedTours = new();
 
         public List<Visitor> visitors = new();
 
-        public Queue<GuidedTour> guidedToursQueue = new(); 
+        public Queue<TourOrTwoTours> guidedToursQueue = new();
 
-        public ZooHandler(List<ZooZone> zones, List<Employee> employees, List<GuidedTour> guidedTours, List<Visitor> Visitors)
+        public ZooHandler(List<ZooZone> zones, List<Employee> employees, List<TourOrTwoTours> guidedTours, List<Visitor> Visitors)
         {
             this.zones = zones;
             this.employees = employees;
             this.guidedTours = guidedTours;
-            foreach (var guidedTour in guidedTours) 
-            { 
+            foreach (var guidedTour in guidedTours)
+            {
                 guidedToursQueue.Enqueue(guidedTour);
             }
             this.visitors = Visitors;
@@ -39,7 +35,7 @@ namespace Zoo.ZooRelated
         public void RunAllTours()
         {
             List<Thread> threads = new List<Thread>();
-            foreach (GuidedTour GuidedTour in guidedTours)
+            foreach (TourOrTwoTours GuidedTour in guidedTours)
             {
                 threads.Add(GuidedTour.touring);
             }

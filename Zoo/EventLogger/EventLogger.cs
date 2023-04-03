@@ -1,7 +1,4 @@
-﻿using System;
-using System.IO;
-
-namespace Zoo.EventLogger
+﻿namespace Zoo.EventLogger
 {
     internal class EventLogger
     {

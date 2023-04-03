@@ -1,18 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Zoo.ZooRelated;
-using Zoo.Model.Employee;
-using System.Net.Http.Headers;
-using Zoo.Utils.Enum;
+﻿using Zoo.Model.Animals;
 using Zoo.Model.Animals.Amphibia;
 using Zoo.Model.Animals.Bird;
 using Zoo.Model.Animals.Land;
 using Zoo.Model.Animals.SeaCreature;
-using Zoo.Model.Animals;
+using Zoo.Model.Employee;
 using Zoo.Tour;
+using Zoo.Utils.Enum;
+using Zoo.ZooRelated;
 
 namespace Zoo.Test.Section2
 {
@@ -90,35 +84,35 @@ namespace Zoo.Test.Section2
                         CurrentWorkingZone = ZooZonesType.SeaCreatureZone
                     }
                 },
-                new List<GuidedTour>
+                new List<TourOrTwoTours>
                 {
-                    new GuidedTour(new List<TourPlace>()
+                    new TourOrTwoTours(new List<TourPlace>()
                     {
                         new TourPlace(ZooZonesType.OrdinaryLandZone),
                         new TourPlace(ZooZonesType.AmphibiaZone)
                     }),
 
-                    new GuidedTour(new List<TourPlace>()
+                    new TourOrTwoTours(new List<TourPlace>()
                     {
                         new TourPlace(ZooZonesType.SeaCreatureZone),
                     }),
 
-                    new GuidedTour(new List<TourPlace>()
+                    new TourOrTwoTours(new List<TourPlace>()
                     {
                         new TourPlace(ZooZonesType.BirdZone),
                     }),
-                    new GuidedTour(new List<TourPlace>()
+                    new TourOrTwoTours(new List<TourPlace>()
                     {
                         new TourPlace(ZooZonesType.AmphibiaZone),
                         new TourPlace(ZooZonesType.BirdZone)
                     }),
-                    new GuidedTour(new List<TourPlace>()
+                    new TourOrTwoTours(new List<TourPlace>()
                     {
                         new TourPlace(ZooZonesType.AmphibiaZone),
                     })
                 },
                 new List<Visitor>()
-                { 
+                {
                     new Visitor("Mike")
                     {
                         Name = "Mike"
@@ -144,7 +138,7 @@ namespace Zoo.Test.Section2
                         Name = "Trunks"
                     },
                     new Visitor("PackMan")
-                    {            
+                    {
                         Name = "PackMan"
                     },
                     new Visitor("OOP")
@@ -185,8 +179,8 @@ namespace Zoo.Test.Section2
                     },
                 }
 
-                    
-                    
+
+
             );
 
             zooHandler.RunAllTours();
