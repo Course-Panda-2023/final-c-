@@ -1,6 +1,6 @@
-﻿using Zoo.Utils.EnumTypes;
+﻿using Zoo.Utils.Enum;
 
-namespace Zoo.ZooRelated.Tour
+namespace Zoo.Tour
 {
     internal class TourPlace
     {
@@ -16,17 +16,17 @@ namespace Zoo.ZooRelated.Tour
 
         public TourPlace(ZooZonesType zooZonesType)
         {
-            this.ZooZonesTypeZooZonesType = zooZonesType;
+            ZooZonesTypeZooZonesType = zooZonesType;
         }
 
         public bool IsEqual(TourPlace other)
         {
-            return other.ZooZonesTypeZooZonesType == this.ZooZonesTypeZooZonesType;
+            return other.ZooZonesTypeZooZonesType == ZooZonesTypeZooZonesType;
         }
 
         public override string ToString()
         {
-            return places[this.ZooZonesTypeZooZonesType];
+            return places[ZooZonesTypeZooZonesType];
         }
     }
 }

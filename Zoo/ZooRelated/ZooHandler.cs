@@ -1,10 +1,9 @@
 ﻿using System.Runtime.InteropServices;
 using Zoo.Utils.CustomException;
 using Zoo.Model.Animals;
-using Zoo.Utils.EnumTypes;
-using Zoo.ZooRelated.Tour;
+using Zoo.Utils.Enum;
 using Zoo.Model.Employee;
-using Zoo.Utils.OrdinaryUtils;
+using Zoo.Tour;
 
 namespace Zoo.ZooRelated
 {

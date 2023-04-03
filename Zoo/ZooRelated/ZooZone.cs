@@ -1,7 +1,7 @@
 ﻿using System.Runtime.InteropServices;
 using Zoo.Model.Animals;
 using Zoo.Utils.CustomException;
-using Zoo.Utils.EnumTypes;
+using Zoo.Utils.Enum;
 using Zoo.ZooUtils.CustomException;
 
 namespace Zoo.ZooRelated

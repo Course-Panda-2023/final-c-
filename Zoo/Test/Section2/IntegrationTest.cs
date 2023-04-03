@@ -5,15 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 using Zoo.ZooRelated;
 using Zoo.Model.Employee;
-using Zoo.ZooRelated.Tour;
 using System.Net.Http.Headers;
-using Zoo.Utils.EnumTypes;
-using Zoo.Utils.OrdinaryUtils;
+using Zoo.Utils.Enum;
 using Zoo.Model.Animals.Amphibia;
 using Zoo.Model.Animals.Bird;
 using Zoo.Model.Animals.Land;
 using Zoo.Model.Animals.SeaCreature;
 using Zoo.Model.Animals;
+using Zoo.Tour;
 
 namespace Zoo.Test.Section2
 {
@@ -26,7 +25,7 @@ namespace Zoo.Test.Section2
 
         public void ExecuteTest()
         {
-            EventLogger eventLogger = new();
+            EventLogger.EventLogger eventLogger = new();
 
             List<Animal> animals = new List<Animal>()
             {

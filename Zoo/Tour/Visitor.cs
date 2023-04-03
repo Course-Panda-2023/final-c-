@@ -1,10 +1,9 @@
-﻿using Zoo.Utils.OrdinaryUtils.Model;
-using Zoo.Utils.EnumTypes;
+﻿using Zoo.Utils.Enum;
 using System;
 
-namespace Zoo.ZooRelated.Tour
+namespace Zoo.Tour
 {
-    internal class Visitor : Person
+    internal class Visitor
     {
         public string Name { get; init; }
 
@@ -15,9 +14,9 @@ namespace Zoo.ZooRelated.Tour
             { ZooZonesType.SeaCreatureZone, "Sea Zone" },
             { ZooZonesType.AmphibiaZone, "Amphibia Zone" }
         };
-        
 
-        public Visitor(string Name) 
+
+        public Visitor(string Name)
         {
             Random random = new Random();
             ZooZonesType randomZone = ZooZonesType.None;
@@ -41,8 +40,8 @@ namespace Zoo.ZooRelated.Tour
                     randomZone = ZooZonesType.OrdinaryLandZone;
                     break;
             }
-            
-           
+
+
             Console.WriteLine($"Visitor {Name} is waiting to {places[randomZone]}");
         }
     }

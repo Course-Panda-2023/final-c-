@@ -1,10 +1,10 @@
 ﻿using System.Collections;
 using System.Xml.Linq;
+using Zoo.EventLogger;
 using Zoo.Utils.CustomException;
-using Zoo.Utils.EnumTypes;
-using Zoo.Utils.OrdinaryUtils;
+using Zoo.Utils.Enum;
 
-namespace Zoo.ZooRelated.Tour
+namespace Zoo.Tour
 {
     internal class GuidedTour
     {
@@ -56,7 +56,7 @@ namespace Zoo.ZooRelated.Tour
 
                 bool isLegalCombination = false;
 
-                
+
 
                 foreach (var legalCombination in legallTourPlaces)
                 {
@@ -122,6 +122,6 @@ namespace Zoo.ZooRelated.Tour
         }
 
 
-        
+
     }
 }

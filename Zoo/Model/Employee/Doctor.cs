@@ -1,7 +1,7 @@
 ﻿using System.Runtime.CompilerServices;
+using Zoo.EventLogger;
 using Zoo.Model.Animals;
-using Zoo.Utils.EnumTypes;
-using Zoo.Utils.OrdinaryUtils;
+using Zoo.Utils.Enum;
 
 namespace Zoo.Model.Employee
 {
