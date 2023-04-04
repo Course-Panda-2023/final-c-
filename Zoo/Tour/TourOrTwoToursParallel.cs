@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using Zoo.EventLogger;
 using Zoo.Util.Enum;
+using Zoo.Util.CustomException;
 
 namespace Zoo.Tour
 {
@@ -19,20 +20,20 @@ namespace Zoo.Tour
         {
             new List <TourPlace> ()
             {
-                new TourPlace(ZooZonesType.OrdinaryLandZone),
-                new TourPlace(ZooZonesType.AmphibiaZone)
+                new TourPlace(ZonesType.OrdinaryLandZone),
+                new TourPlace(ZonesType.AmphibiaZone)
             },
 
             new List<TourPlace>
             {
-                new TourPlace(ZooZonesType.OrdinaryLandZone),
-                new TourPlace(ZooZonesType.SeaCreatureZone)
+                new TourPlace(ZonesType.OrdinaryLandZone),
+                new TourPlace(ZonesType.SeaCreatureZone)
             },
 
             new List<TourPlace>
             {
-                new TourPlace(ZooZonesType.AmphibiaZone),
-                new TourPlace(ZooZonesType.SeaCreatureZone)
+                new TourPlace(ZonesType.AmphibiaZone),
+                new TourPlace(ZonesType.SeaCreatureZone)
             }
         };
 

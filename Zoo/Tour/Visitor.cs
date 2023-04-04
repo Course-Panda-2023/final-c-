@@ -6,37 +6,37 @@ namespace Zoo.Tour
     {
         public string? Name { get; init; }
 
-        private readonly Dictionary<ZooZonesType, string> places = new()
+        private readonly Dictionary<ZonesType, string> places = new()
         {
-            { ZooZonesType.BirdZone, "Birds Zone" },
-            { ZooZonesType.OrdinaryLandZone, "Land Zone" },
-            { ZooZonesType.SeaCreatureZone, "Sea Zone" },
-            { ZooZonesType.AmphibiaZone, "Amphibia Zone" }
+            { ZonesType.BirdZone, "Birds Zone" },
+            { ZonesType.OrdinaryLandZone, "Land Zone" },
+            { ZonesType.SeaCreatureZone, "Sea Zone" },
+            { ZonesType.AmphibiaZone, "Amphibia Zone" }
         };
 
 
         public Visitor(string Name)
         {
             Random random = new();
-            ZooZonesType randomZone = ZooZonesType.None;
+            ZonesType randomZone = ZonesType.None;
 
             int value = random.Next(1, 4);
             switch (value)
             {
                 case 1:
-                    randomZone = ZooZonesType.BirdZone;
+                    randomZone = ZonesType.BirdZone;
                     break;
 
                 case 2:
-                    randomZone = ZooZonesType.AmphibiaZone;
+                    randomZone = ZonesType.AmphibiaZone;
                     break;
 
                 case 3:
-                    randomZone = ZooZonesType.SeaCreatureZone;
+                    randomZone = ZonesType.SeaCreatureZone;
                     break;
 
                 case 4:
-                    randomZone = ZooZonesType.OrdinaryLandZone;
+                    randomZone = ZonesType.OrdinaryLandZone;
                     break;
             }
 

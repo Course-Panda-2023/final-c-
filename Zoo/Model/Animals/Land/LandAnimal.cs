@@ -6,7 +6,7 @@ namespace Zoo.Model.Animals.Land
     {
         public LandAnimal()
         {
-            GrowingUpZone = ZooZonesType.OrdinaryLandZone;
+            GrowingUpZone = ZonesType.OrdinaryLandZone;
         }
     }
 }

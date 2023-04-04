@@ -8,7 +8,7 @@ namespace Zoo.Model.Animals.SeaCreature
 
         public GoldFish()
         {
-            AnimalType = ZooAnimalType.GoldFish;
+            AnimalType = AnimalType.GoldFish;
         }
 
         public override void MakeSound()

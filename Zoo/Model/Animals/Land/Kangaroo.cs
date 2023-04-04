@@ -8,7 +8,7 @@ namespace Zoo.Model.Animals.Land
 
         public Kangaroo()
         {
-            AnimalType = ZooAnimalType.Kangaroo;
+            AnimalType = AnimalType.Kangaroo;
         }
 
         public override void MakeSound()

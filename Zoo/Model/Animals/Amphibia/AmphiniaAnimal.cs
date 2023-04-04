@@ -6,7 +6,7 @@ namespace Zoo.Model.Animals.Amphibia
     {
         public AmphiniaAnimal()
         {
-            GrowingUpZone = ZooZonesType.AmphibiaZone;
+            GrowingUpZone = ZonesType.AmphibiaZone;
         }
     }
 }

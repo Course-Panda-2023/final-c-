@@ -4,17 +4,17 @@ namespace Zoo.Tour
 {
     internal class TourPlace
     {
-        private readonly Dictionary<ZooZonesType, string> places = new()
+        private readonly Dictionary<ZonesType, string> places = new()
         {
-            { ZooZonesType.BirdZone, "Birds Zone" },
-            { ZooZonesType.OrdinaryLandZone, "Land Zone" },
-            { ZooZonesType.SeaCreatureZone, "Sea Zone" },
-            { ZooZonesType.AmphibiaZone, "Amphibia Zone" }
+            { ZonesType.BirdZone, "Birds Zone" },
+            { ZonesType.OrdinaryLandZone, "Land Zone" },
+            { ZonesType.SeaCreatureZone, "Sea Zone" },
+            { ZonesType.AmphibiaZone, "Amphibia Zone" }
         };
 
-        public ZooZonesType ZooZonesTypeZooZonesType { get; set; }
+        public ZonesType ZooZonesTypeZooZonesType { get; set; }
 
-        public TourPlace(ZooZonesType zooZonesType)
+        public TourPlace(ZonesType zooZonesType)
         {
             ZooZonesTypeZooZonesType = zooZonesType;
         }

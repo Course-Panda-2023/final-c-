@@ -8,7 +8,7 @@ namespace Zoo.Model.Animals.Bird
 
         public Owl()
         {
-            AnimalType = ZooAnimalType.Owl;
+            AnimalType = AnimalType.Owl;
         }
 
         public override void MakeSound()

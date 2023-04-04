@@ -11,8 +11,8 @@ namespace Zoo.Model.Employee
             EmployeeEventArgs? args = new()
             {
                 EmployeeName = DoctorName,
-                StartTime = 5,
-                DayStartingTime = StartingTime
+                WorkTakesInSeconds = 5,
+                DayStartingTime = StartingTimeOfDay
             };
             EndsWorksAt += EndingWorksAt;
 
@@ -27,8 +27,8 @@ namespace Zoo.Model.Employee
             Thread thread = new(() =>
             {
                 Thread.Sleep(args.DayStartingTime);
-                Thread.Sleep(args.StartTime * 1000);
-                string message = $"Doctor {args.EmployeeName} ends at {args.StartTime + args.DayStartingTime}";
+                Thread.Sleep(args.WorkTakesInSeconds * 1000);
+                string message = $"Doctor {args.EmployeeName} ends at {args.WorkTakesInSeconds + args.DayStartingTime}";
                 Console.WriteLine(message);
                 EventLoggerSingleton.GetInstance().LogIntoEvent(message);
             });

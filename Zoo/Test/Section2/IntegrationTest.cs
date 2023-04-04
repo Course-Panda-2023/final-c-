@@ -13,15 +13,15 @@ namespace Zoo.Test.Section2
     internal class IntegrationTest
     {
 
-        public Dictionary<ZooZonesType, List<Animal>> GetAnimalsInZone(List<Animal> animals)
+        public Dictionary<ZonesType, List<Animal>> GetAnimalsInZone(List<Animal> animals)
         {
             return animals.GroupBy(animal => animal.GrowingUpZone).ToDictionary(animal => animal.Key, animal => animal.ToList());
         }
 
         public void ExecuteTest()
         {
-            EventLogger.EventLogger eventLogger = new();
-            Dictionary<ZooZonesType, List<Animal>> regionAndItsAnimals = GetAnimalsZone();
+            EventLogger.LogToFile eventLogger = new();
+            Dictionary<ZonesType, List<Animal>> regionAndItsAnimals = GetAnimalsZone();
 
             ApplicationConstants ApplicationConstantsDependencyInjection = new();
             List<AnimalsZone> zones = regionAndItsAnimals.Select(region => new AnimalsZone(region.Value, region.Key)).ToList();
@@ -96,27 +96,27 @@ namespace Zoo.Test.Section2
             {
                 new TourOrTwoToursParallel(new List<TourPlace>()
                 {
-                    new TourPlace(ZooZonesType.OrdinaryLandZone),
-                    new TourPlace(ZooZonesType.AmphibiaZone)
+                    new TourPlace(ZonesType.OrdinaryLandZone),
+                    new TourPlace(ZonesType.AmphibiaZone)
                 }),
 
                 new TourOrTwoToursParallel(new List<TourPlace>()
                 {
-                    new TourPlace(ZooZonesType.SeaCreatureZone),
+                    new TourPlace(ZonesType.SeaCreatureZone),
                 }),
 
                 new TourOrTwoToursParallel(new List<TourPlace>()
                 {
-                    new TourPlace(ZooZonesType.BirdZone),
+                    new TourPlace(ZonesType.BirdZone),
                 }),
                 new TourOrTwoToursParallel(new List<TourPlace>()
                 {
-                    new TourPlace(ZooZonesType.AmphibiaZone),
-                    new TourPlace(ZooZonesType.BirdZone)
+                    new TourPlace(ZonesType.AmphibiaZone),
+                    new TourPlace(ZonesType.BirdZone)
                 }),
                 new TourOrTwoToursParallel(new List<TourPlace>()
                 {
-                    new TourPlace(ZooZonesType.AmphibiaZone),
+                    new TourPlace(ZonesType.AmphibiaZone),
                 })
             };
             List<Employee> Employees = new List<Employee>()
@@ -124,32 +124,32 @@ namespace Zoo.Test.Section2
                     new Doctor("Assaf The Doc")
                     {
                         ApplicationConstantsInjection = ApplicationConstantsDependencyInjection,
-                        CurrentWorkingZone = ZooZonesType.BirdZone,
+                        CurrentWorkingZone = ZonesType.BirdZone,
                     },
                     new Cleaner("Raz the employee")
                     {
                         ApplicationConstantsInjection = ApplicationConstantsDependencyInjection,
-                        CurrentWorkingZone = ZooZonesType.AmphibiaZone,
+                        CurrentWorkingZone = ZonesType.AmphibiaZone,
                     },
                     new Feeder("Amit the Tal")
                     {
                         ApplicationConstantsInjection = ApplicationConstantsDependencyInjection,
-                        CurrentWorkingZone = ZooZonesType.OrdinaryLandZone
+                        CurrentWorkingZone = ZonesType.OrdinaryLandZone
                     },
                     new Feeder("Guy the coder")
                     {
                         ApplicationConstantsInjection = ApplicationConstantsDependencyInjection,
-                        CurrentWorkingZone = ZooZonesType.SeaCreatureZone
+                        CurrentWorkingZone = ZonesType.SeaCreatureZone
                     },
                     new Feeder("Eyal the nice")
                     {
                         ApplicationConstantsInjection = ApplicationConstantsDependencyInjection,
-                        CurrentWorkingZone = ZooZonesType.OrdinaryLandZone
+                        CurrentWorkingZone = ZonesType.OrdinaryLandZone
                     },
                     new Doctor("Liav")
                     {
                         ApplicationConstantsInjection = ApplicationConstantsDependencyInjection,
-                        CurrentWorkingZone = ZooZonesType.SeaCreatureZone
+                        CurrentWorkingZone = ZonesType.SeaCreatureZone
                     }
                 };
             ZooTimingScheduler zooHandler = new
@@ -166,7 +166,7 @@ namespace Zoo.Test.Section2
             zooHandler.RunAllTours();
         }
 
-        private Dictionary<ZooZonesType, List<Animal>> GetAnimalsZone()
+        private Dictionary<ZonesType, List<Animal>> GetAnimalsZone()
         {
             List<Animal> animals = new()
             {
@@ -192,7 +192,7 @@ namespace Zoo.Test.Section2
                 new Whale() { RaceName = "Whale" },
             };
 
-            Dictionary<ZooZonesType, List<Animal>> regionAndItsAnimals = GetAnimalsInZone(animals);
+            Dictionary<ZonesType, List<Animal>> regionAndItsAnimals = GetAnimalsInZone(animals);
             return regionAndItsAnimals;
         }
     }

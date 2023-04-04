@@ -4,13 +4,13 @@ namespace Zoo
 {
     internal class ApplicationConstants
     {
-        internal readonly Dictionary<ZooZonesType, string> Places = new()
+        internal readonly Dictionary<ZonesType, string> Places = new()
         {
-            { ZooZonesType.None, "" },
-            { ZooZonesType.BirdZone, "Birds Zone" },
-            { ZooZonesType.OrdinaryLandZone, "Land Zone" },
-            { ZooZonesType.SeaCreatureZone, "Sea Zone" },
-            { ZooZonesType.AmphibiaZone, "Amphibia Zone" }
+            { ZonesType.None, "" },
+            { ZonesType.BirdZone, "Birds Zone" },
+            { ZonesType.OrdinaryLandZone, "Land Zone" },
+            { ZonesType.SeaCreatureZone, "Sea Zone" },
+            { ZonesType.AmphibiaZone, "Amphibia Zone" }
         };
     }
 }

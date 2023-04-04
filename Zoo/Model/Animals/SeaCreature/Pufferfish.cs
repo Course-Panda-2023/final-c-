@@ -8,7 +8,7 @@ namespace Zoo.Model.Animals.SeaCreature
 
         public PufferFish()
         {
-            AnimalType = ZooAnimalType.Pufferfish;
+            AnimalType = AnimalType.Pufferfish;
         }
 
         public override void MakeSound()

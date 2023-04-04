@@ -1,6 +1,6 @@
-﻿namespace Zoo.Utils.Enum
+﻿namespace Zoo.Util.Enum
 {
-    enum ZooAnimalType
+    internal enum AnimalType
     {
         None = 0,
         Alligator,

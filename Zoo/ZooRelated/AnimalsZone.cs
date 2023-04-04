@@ -1,6 +1,7 @@
 ﻿using System.Runtime.InteropServices;
 using Zoo.Model.Animals;
 using Zoo.Util.Enum;
+using Zoo.Util.CustomException;
 
 namespace Zoo.ZooRelated
 {
@@ -10,7 +11,7 @@ namespace Zoo.ZooRelated
 
         public string? Location { get; set; }
 
-        public ZooZonesType Type { get; }
+        public ZonesType Type { get; }
 
 
         public List<Animal>? Animals;
@@ -27,7 +28,7 @@ namespace Zoo.ZooRelated
             Animals = animals;
         }
 
-        public AnimalsZone(List<Animal> animals, ZooZonesType type)
+        public AnimalsZone(List<Animal> animals, ZonesType type)
         {
             CheckIfAnimalsAreDistinct(animals);
 
@@ -50,7 +51,7 @@ namespace Zoo.ZooRelated
         }
 
         // Note: Not related to this class but needed here
-        private int CountAnimalTypeInAnimals(List<Animal> animals, ZooAnimalType AnimalType)
+        private int CountAnimalTypeInAnimals(List<Animal> animals, AnimalType AnimalType)
         {
             return animals.Count(animalLinq => animalLinq.AnimalType == AnimalType);
         }
@@ -65,9 +66,9 @@ namespace Zoo.ZooRelated
 
         private void CheckIfForEachZoneMoreAtLeastThreeAnimals(List<Animal> animals)
         {
-            Dictionary<ZooZonesType, List<Animal>> ZoneAndItsAnimals = GetAnimalsInZone(animals);
+            Dictionary<ZonesType, List<Animal>> ZoneAndItsAnimals = GetAnimalsInZone(animals);
 
-            foreach (ZooZonesType zoneType in ZoneAndItsAnimals.Keys)
+            foreach (ZonesType zoneType in ZoneAndItsAnimals.Keys)
             {
                 int ZoneCount = ZoneAndItsAnimals[zoneType].Count;
                 if (ZoneCount < 3)
@@ -98,7 +99,7 @@ namespace Zoo.ZooRelated
             }
         }
 
-        public Dictionary<ZooZonesType, List<Animal>> GetAnimalsInZone(List<Animal> animals)
+        public Dictionary<ZonesType, List<Animal>> GetAnimalsInZone(List<Animal> animals)
         {
             return animals.GroupBy(animal => animal.GrowingUpZone).ToDictionary(animal => animal.Key, animal => animal.ToList());
         }

@@ -1,6 +1,6 @@
-﻿namespace Zoo.Utils.Enum
+﻿namespace Zoo.Util.Enum
 {
-    enum ZooZonesType
+    internal enum ZonesType
     {
         None = 0,
         BirdZone,

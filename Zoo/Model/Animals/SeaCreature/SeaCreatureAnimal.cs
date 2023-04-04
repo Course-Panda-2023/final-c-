@@ -6,7 +6,7 @@ namespace Zoo.Model.Animals.SeaCreature
     {
         public SeaCreatureAnimal()
         {
-            GrowingUpZone = ZooZonesType.SeaCreatureZone;
+            GrowingUpZone = ZonesType.SeaCreatureZone;
         }
     }
 }

@@ -6,7 +6,7 @@ namespace Zoo.Model.Animals.Bird
     {
         public BirdAnimal()
         {
-            GrowingUpZone = ZooZonesType.BirdZone;
+            GrowingUpZone = ZonesType.BirdZone;
         }
     }
 }

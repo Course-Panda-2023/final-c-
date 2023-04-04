@@ -8,7 +8,7 @@ namespace Zoo.Model.Animals.SeaCreature
 
         public Whale()
         {
-            AnimalType = ZooAnimalType.Whale;
+            AnimalType = AnimalType.Whale;
         }
 
         public override void MakeSound()

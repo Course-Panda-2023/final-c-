@@ -9,27 +9,39 @@ namespace Zoo.Model.Employee
 
         public string? Name { get; init; }
 
-        public ZooZonesType CurrentWorkingZone { get; set; }
+        public ZonesType CurrentWorkingZone { get; set; }
 
-        protected int StartingTime { get; set; }
+        protected int StartingTimeOfDay { get; set; }
+
+        public Thread? ActiveTask;
 
         public Employee()
         {
             Random random = new();
-            StartingAtTime(random.Next(1, 4));
+            StartingTimeOfDay = random.Next(1, 4) * 1000; // seconds
+            StartingAtTime();
         }
 
-        public void StartingAtTime(int time)
+        public void StartingAtTime()
         {
-            StartingTime = time;
-            Thread thread = new(() =>
+            Thread ActiveTask = new(() =>
             {
-                Thread.Sleep(time * 1000);
-                string message = $"Employee {Name} starts at {time} working at {ApplicationConstantsInjection?.Places[CurrentWorkingZone]}";
-                Console.WriteLine(message);
-                EventLoggerSingleton.GetInstance().LogIntoEvent(message);
+                Thread.Sleep(StartingTimeOfDay);
+                StreamsLogMessage();
             });
-            thread.Start();
+            ActiveTask.Start();
+        }
+
+        private void StreamsLogMessage()
+        {
+            string message = $"Employee {Name} starts at {StartingTimeOfDay} working at {ApplicationConstantsInjection?.Places[CurrentWorkingZone]}";
+            Console.WriteLine(message);
+            EventLoggerSingleton.GetInstance().LogIntoEvent(message);
+        }
+
+        public bool IsDelayingTour(ZonesType zoneType)
+        {
+            return ActiveTask!.IsAlive && zoneType == CurrentWorkingZone;
         }
     }
 }

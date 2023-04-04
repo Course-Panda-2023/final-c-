@@ -8,9 +8,9 @@ namespace Zoo.Model.Animals
 
         public string? NickName { get; set; }
 
-        public ZooZonesType GrowingUpZone { get; protected set; }
+        public ZonesType GrowingUpZone { get; protected set; }
 
-        public ZooAnimalType AnimalType { get; protected set; }
+        public AnimalType AnimalType { get; protected set; }
 
         public abstract void MakeSound();
     }

@@ -1,6 +1,6 @@
 ﻿namespace Zoo.Util.Enum
 {
-    internal enum EmployeesType
+    internal enum EmployeeType
     {
         None = 0,
         Feeder,
