@@ -1,55 +1,69 @@
-﻿using System.Net.NetworkInformation;
+﻿using System.IO;
+using System.Text;
 
 namespace Zoo.EventLogger
 {
     internal class LogToFile
     {
-        private static readonly object _lockObject = new();
-        private static StreamWriter? _streamWriter;
-        private static readonly string FileName;
+        private readonly object LogLock = new();
+        private StreamWriter? StreamWriter;
+        private readonly string FilePath;
 
-        private static string GetFormattedTimeAndDate()
+        private string GetFormattedDate(DateTime date)
         {
-            DateTime thisDay = DateTime.Today;
-            string[] todayDates = thisDay.ToString().Split(" ");
-            string today = todayDates[0].Replace("/", ".");
-            
-            return today;
+            string[] dateParts = date.ToString().Split(" ");
+            string formattedDate = dateParts[0].Replace("/", ".");
+            return formattedDate;
         }
 
-        private static string GenerateFileName()
+        private string GetFormattedTime(DateTime time)
         {
-            // replace to string builder please!!! Asaf Wrote this
-            string result;
-            string preffix = "EventLogs_";
-
-            string today = GetFormattedTimeAndDate();
-            result = preffix + " " + today + "_";
-            string time = DateTime.Now.ToString("h:mm").Replace(":", ".");
-            result += time;
-
-            return result;
+            string formattedTime = time.ToString("h:mm").Replace(":", ".");
+            return formattedTime;
         }
 
-        static LogToFile()
+        private string GenerateFileName(string prefix, DateTime date, DateTime time)
         {
-            FileName = GenerateFileName();
-            _streamWriter = new StreamWriter(@$"C:\Users\AssafHillel\source\repos\Zoo\Zoo\{FileName}.txt", true);
+            StringBuilder fileNameBuilder = new StringBuilder();
+            fileNameBuilder.Append(prefix);
+            fileNameBuilder.Append(' ');
+            fileNameBuilder.Append(GetFormattedDate(date));
+            fileNameBuilder.Append('_');
+            fileNameBuilder.Append(GetFormattedTime(time));
+            return fileNameBuilder.ToString();
         }
 
-        public void LogIntoEvent(string message)
+        public LogToFile(string filePath)
         {
-            lock (_lockObject)
+            string prefix = "EventLogs_";
+            DateTime now = DateTime.Now;
+            this.FilePath = filePath;
+            StreamWriter = new StreamWriter(Path.Combine(filePath, GenerateFileName(prefix, now, now) + ".txt"), true);
+        }
+
+        private string FormatLogMessage(string message)
+        {
+            StringBuilder logMessageBuilder = new StringBuilder();
+            logMessageBuilder.Append(DateTime.Now);
+            logMessageBuilder.Append(": ");
+            logMessageBuilder.Append(message);
+            return logMessageBuilder.ToString();
+        }
+
+        public void LogEvent(string message)
+        {
+            lock (LogLock)
             {
-                _streamWriter!.WriteLine($"{DateTime.Now}: {message}");
-                _streamWriter.Flush();
+                string logMessage = FormatLogMessage(message);
+                StreamWriter!.WriteLine(logMessage);
+                StreamWriter.Flush();
             }
         }
 
-        public static void Close()
+        public void Close()
         {
-            _streamWriter?.Dispose();
-            _streamWriter = null;
+            StreamWriter?.Dispose();
+            StreamWriter = null;
         }
     }
 }
