@@ -3,9 +3,8 @@ using Zoo.Tour;
 
 namespace Zoo.ZooRelated
 {
-    internal class ZooHandler
+    internal class ZooTimingScheduler
     {
-
         public List<ZooZone> zones = new();
 
         public List<Employee> employees;
@@ -20,7 +19,7 @@ namespace Zoo.ZooRelated
 
         public Queue<TourOrTwoTours> guidedToursQueue = new();
 
-        public ZooHandler(List<ZooZone> zones, List<Employee> employees, List<TourOrTwoTours> guidedTours, List<Visitor> Visitors)
+        public ZooTimingScheduler(List<ZooZone> zones, List<Employee> employees, List<TourOrTwoTours> guidedTours, List<Visitor> Visitors)
         {
             this.zones = zones;
             this.employees = employees;
@@ -34,16 +33,15 @@ namespace Zoo.ZooRelated
 
         public void RunAllTours()
         {
-            List<Thread> threads = new List<Thread>();
+            List<Action> toursOrderOfOperation = new List<Action>();
             foreach (TourOrTwoTours GuidedTour in guidedTours)
             {
-                threads.Add(GuidedTour.touring);
+                toursOrderOfOperation.Add(GuidedTour.touring);
             }
 
-            foreach (Thread thread in threads)
+            foreach (Action activateTour in toursOrderOfOperation)
             {
-                thread.Start();
-                thread.Join();
+                activateTour.Invoke();
             }
         }
     }

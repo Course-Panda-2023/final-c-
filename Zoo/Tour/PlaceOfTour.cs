@@ -2,7 +2,7 @@
 
 namespace Zoo.Tour
 {
-    internal class TourPlace
+    internal class PlaceOfTour
     {
         private readonly Dictionary<ZooZonesType, string> places = new()
         {
@@ -14,12 +14,12 @@ namespace Zoo.Tour
 
         public ZooZonesType ZooZonesTypeZooZonesType { get; set; }
 
-        public TourPlace(ZooZonesType zooZonesType)
+        public PlaceOfTour(ZooZonesType zooZonesType)
         {
             ZooZonesTypeZooZonesType = zooZonesType;
         }
 
-        public bool IsEqual(TourPlace other)
+        public bool IsEqual(PlaceOfTour other)
         {
             return other.ZooZonesTypeZooZonesType == ZooZonesTypeZooZonesType;
         }

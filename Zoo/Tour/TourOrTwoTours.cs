@@ -10,34 +10,34 @@ namespace Zoo.Tour
     /// </summary>
     internal class TourOrTwoTours
     {
-        public Thread touring;
+        public Action touring;
 
         public Visitor[] visitor = new Visitor[5];
 
-        public List<TourPlace> places;
+        public List<PlaceOfTour> places;
 
-        private readonly List<List<TourPlace>> legallTourPlaces = new()
+        private readonly List<List<PlaceOfTour>> legallTourPlaces = new()
         {
-            new List <TourPlace> ()
+            new List <PlaceOfTour> ()
             {
-                new TourPlace(ZooZonesType.OrdinaryLandZone),
-                new TourPlace(ZooZonesType.AmphibiaZone)
+                new PlaceOfTour(ZooZonesType.OrdinaryLandZone),
+                new PlaceOfTour(ZooZonesType.AmphibiaZone)
             },
 
-            new List<TourPlace>
+            new List<PlaceOfTour>
             {
-                new TourPlace(ZooZonesType.OrdinaryLandZone),
-                new TourPlace(ZooZonesType.SeaCreatureZone)
+                new PlaceOfTour(ZooZonesType.OrdinaryLandZone),
+                new PlaceOfTour(ZooZonesType.SeaCreatureZone)
             },
 
-            new List<TourPlace>
+            new List<PlaceOfTour>
             {
-                new TourPlace(ZooZonesType.AmphibiaZone),
-                new TourPlace(ZooZonesType.SeaCreatureZone)
+                new PlaceOfTour(ZooZonesType.AmphibiaZone),
+                new PlaceOfTour(ZooZonesType.SeaCreatureZone)
             }
         };
 
-        private void CheckIfTourCanBeParallel(List<TourPlace> places)
+        private void CheckIfTourCanBeParallel(List<PlaceOfTour> places)
         {
             try
             {
@@ -50,8 +50,8 @@ namespace Zoo.Tour
                 if (places.Count == 1)
                     return;
 
-                TourPlace tourPlace1 = places[0];
-                TourPlace tourPlacetourPlace2 = places[1];
+                PlaceOfTour tourPlace1 = places[0];
+                PlaceOfTour tourPlacetourPlace2 = places[1];
 
                 if (tourPlace1.ZooZonesTypeZooZonesType == tourPlacetourPlace2.ZooZonesTypeZooZonesType)
                     throw new TwoOfTheSameTourException($"There are two of {tourPlace1.ZooZonesTypeZooZonesType}");
@@ -84,12 +84,12 @@ namespace Zoo.Tour
             }
         }
 
-        public TourOrTwoTours(List<TourPlace> places)
+        public TourOrTwoTours(List<PlaceOfTour> places)
         {
             CheckIfTourCanBeParallel(places);
             this.places = places;
 
-            touring = new Thread(ActivateTour);
+            touring = new Action(ActivateTour);
         }
 
         private void TourStart()
@@ -123,16 +123,13 @@ namespace Zoo.Tour
 
 
         private void ActivateTour()
-        {
-            Thread thread = new(() =>
-            {
-                TourStart();
-                int TenSecondsInMili = 10000;
-                // each tour is 10 seconds
-                Thread.Sleep(TenSecondsInMili);
-                TourEnd();
-            });
-            thread.Start();
+        { 
+            TourStart();
+            int TenSecondsInMili = 10000;
+            // each tour is 10 seconds
+            Thread.Sleep(TenSecondsInMili);
+            TourEnd();
+            
         }
 
 

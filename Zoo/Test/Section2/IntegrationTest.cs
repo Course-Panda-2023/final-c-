@@ -48,7 +48,7 @@ namespace Zoo.Test.Section2
             var regionAndItsAnimals = GetAnimalsInZone(animals);
 
             List<ZooZone> zones = regionAndItsAnimals.Select(region => new ZooZone(region.Value, region.Key)).ToList();
-            ZooHandler zooHandler = new
+            ZooTimingScheduler zooHandler = new
             (
                 zones,
                 new List<Employee>()
@@ -86,29 +86,29 @@ namespace Zoo.Test.Section2
                 },
                 new List<TourOrTwoTours>
                 {
-                    new TourOrTwoTours(new List<TourPlace>()
+                    new TourOrTwoTours(new List<PlaceOfTour>()
                     {
-                        new TourPlace(ZooZonesType.OrdinaryLandZone),
-                        new TourPlace(ZooZonesType.AmphibiaZone)
+                        new PlaceOfTour(ZooZonesType.OrdinaryLandZone),
+                        new PlaceOfTour(ZooZonesType.AmphibiaZone)
                     }),
 
-                    new TourOrTwoTours(new List<TourPlace>()
+                    new TourOrTwoTours(new List<PlaceOfTour>()
                     {
-                        new TourPlace(ZooZonesType.SeaCreatureZone),
+                        new PlaceOfTour(ZooZonesType.SeaCreatureZone),
                     }),
 
-                    new TourOrTwoTours(new List<TourPlace>()
+                    new TourOrTwoTours(new List<PlaceOfTour>()
                     {
-                        new TourPlace(ZooZonesType.BirdZone),
+                        new PlaceOfTour(ZooZonesType.BirdZone),
                     }),
-                    new TourOrTwoTours(new List<TourPlace>()
+                    new TourOrTwoTours(new List<PlaceOfTour>()
                     {
-                        new TourPlace(ZooZonesType.AmphibiaZone),
-                        new TourPlace(ZooZonesType.BirdZone)
+                        new PlaceOfTour(ZooZonesType.AmphibiaZone),
+                        new PlaceOfTour(ZooZonesType.BirdZone)
                     }),
-                    new TourOrTwoTours(new List<TourPlace>()
+                    new TourOrTwoTours(new List<PlaceOfTour>()
                     {
-                        new TourPlace(ZooZonesType.AmphibiaZone),
+                        new PlaceOfTour(ZooZonesType.AmphibiaZone),
                     })
                 },
                 new List<Visitor>()
