@@ -106,12 +106,12 @@ namespace Zoo.Tour
             if (places.Count == 1)
             {
                 Console.WriteLine($"Tour starts to {places[0]} ");
-                EventLoggerSingleton.GetInstance().LogIntoEvent($"Tour starts to {places[0]} ");
+                LogToFileSingleton.GetInstance().LogIntoEvent($"Tour starts to {places[0]} ");
                 return;
             }
 
             Console.WriteLine($"Tours start to {places[0]} and {places[1]}");
-            EventLoggerSingleton.GetInstance().LogIntoEvent($"Tours start to {places[0]} and {places[1]}");
+            LogToFileSingleton.GetInstance().LogIntoEvent($"Tours start to {places[0]} and {places[1]}");
 
         }
 
@@ -120,12 +120,12 @@ namespace Zoo.Tour
             if (places.Count == 1)
             {
                 Console.WriteLine($"Tour ends to {places[0]} ");
-                EventLoggerSingleton.GetInstance().LogIntoEvent($"Tour ends to {places[0]} ");
+                LogToFileSingleton.GetInstance().LogIntoEvent($"Tour ends to {places[0]} ");
                 return;
             }
 
             Console.WriteLine($"Tours end to {places[0]} and {places[1]}");
-            EventLoggerSingleton.GetInstance().LogIntoEvent($"Tours end to {places[0]} and {places[1]}");
+            LogToFileSingleton.GetInstance().LogIntoEvent($"Tours end to {places[0]} and {places[1]}");
 
         }
 

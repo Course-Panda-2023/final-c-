@@ -13,6 +13,8 @@ namespace Zoo.Model.Employee
 
         protected int StartingTimeOfDay { get; set; }
 
+        protected int? WorkTakesInSeconds { get; set; }
+
         public Thread? ActiveTask;
 
         public Employee()
@@ -36,7 +38,7 @@ namespace Zoo.Model.Employee
         {
             string message = $"Employee {Name} starts at {StartingTimeOfDay} working at {ApplicationConstantsInjection?.Places[CurrentWorkingZone]}";
             Console.WriteLine(message);
-            EventLoggerSingleton.GetInstance().LogIntoEvent(message);
+            LogToFileSingleton.GetInstance().LogIntoEvent(message);
         }
 
         public bool IsDelayingTour(ZonesType zoneType)

@@ -6,12 +6,13 @@ namespace Zoo.Model.Employee
     {
         public event EventHandler<EmployeeEventArgs>? EndsWorksAt;
 
-        public Doctor(string DoctorName) : base()
+        public Doctor(string DoctorName, int workTakesInSeconds = 5) : base()
         {
+            WorkTakesInSeconds = workTakesInSeconds;
             EmployeeEventArgs? args = new()
             {
                 EmployeeName = DoctorName,
-                WorkTakesInSeconds = 5,
+                WorkTakesInSeconds = workTakesInSeconds,
                 DayStartingTime = StartingTimeOfDay
             };
             EndsWorksAt += EndingWorksAt;
@@ -30,7 +31,7 @@ namespace Zoo.Model.Employee
                 Thread.Sleep(args.WorkTakesInSeconds * 1000);
                 string message = $"Doctor {args.EmployeeName} ends at {args.WorkTakesInSeconds + args.DayStartingTime}";
                 Console.WriteLine(message);
-                EventLoggerSingleton.GetInstance().LogIntoEvent(message);
+                LogToFileSingleton.GetInstance().LogIntoEvent(message);
             });
 
             thread.Start();
