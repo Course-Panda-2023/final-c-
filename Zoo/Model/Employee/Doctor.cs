@@ -4,26 +4,27 @@ namespace Zoo.Model.Employee
 {
     internal class Doctor : Employee
     {
-        public event EventHandler<EmployeeEventArgs> EndsWorksAt;
+        public event EventHandler<EmployeeEventArgs>? EndsWorksAt;
 
-        public Doctor(string DoctorName)
+        public Doctor(string DoctorName) : base()
         {
-            EmployeeEventArgs args = new EmployeeEventArgs();
-            args.EmployeeName = DoctorName;
-            args.StartTime = 5;
-            args.DayStartingTime = this.StartingTime;
+            EmployeeEventArgs? args = new()
+            {
+                EmployeeName = DoctorName,
+                StartTime = 5,
+                DayStartingTime = StartingTime
+            };
             EndsWorksAt += EndingWorksAt;
 
-            // Raise the event
             EndsWorksAt?.Invoke(this, args);
         }
 
-        public static void EndingWorksAt(object sender, EventArgs e)
+        public static void EndingWorksAt(object? sender, EventArgs e)
         {
-            Employee employee = sender as Employee;
-            EmployeeEventArgs args = e as EmployeeEventArgs;
+            Employee? employee = sender as Employee;
+            EmployeeEventArgs? args = e as EmployeeEventArgs;
 
-            Thread thread = new Thread(() =>
+            Thread thread = new(() =>
             {
                 Thread.Sleep(args.DayStartingTime);
                 Thread.Sleep(args.StartTime * 1000);

@@ -5,44 +5,41 @@ namespace Zoo.ZooRelated
 {
     internal class ZooTimingScheduler
     {
-        public List<ZooZone> zones = new();
+        public List<AnimalsZone> AnimalsZones = new();
 
-        public List<Employee> employees;
+        public List<Employee> ZooEployees;
 
-        public List<EventHandler> employeesStarts = new();
+        public List<TourOrTwoToursParallel> Tours = new();
 
-        public List<EventHandler> employyeesEnds = new();
+        public List<Visitor> ZooVisitors = new();
 
-        public List<TourOrTwoTours> guidedTours = new();
-
-        public List<Visitor> visitors = new();
-
-        public Queue<TourOrTwoTours> guidedToursQueue = new();
-
-        public ZooTimingScheduler(List<ZooZone> zones, List<Employee> employees, List<TourOrTwoTours> guidedTours, List<Visitor> Visitors)
+        public ZooTimingScheduler(List<AnimalsZone> AnimalsZones, List<Employee> Employees, List<TourOrTwoToursParallel> Tours, List<Visitor> Visitors)
         {
-            this.zones = zones;
-            this.employees = employees;
-            this.guidedTours = guidedTours;
-            foreach (var guidedTour in guidedTours)
-            {
-                guidedToursQueue.Enqueue(guidedTour);
-            }
-            this.visitors = Visitors;
+            this.AnimalsZones = AnimalsZones;
+            ZooEployees = Employees;
+            this.Tours = Tours;
+            ZooVisitors = Visitors;
         }
 
         public void RunAllTours()
         {
-            List<Action> toursOrderOfOperation = new List<Action>();
-            foreach (TourOrTwoTours GuidedTour in guidedTours)
-            {
-                toursOrderOfOperation.Add(GuidedTour.touring);
-            }
+            List<Action> toursOrderOfOperation = OrderTimingTours();
 
             foreach (Action activateTour in toursOrderOfOperation)
             {
                 activateTour.Invoke();
             }
+        }
+
+        private List<Action> OrderTimingTours()
+        {
+            List<Action> toursOrderOfOperation = new();
+            foreach (TourOrTwoToursParallel Tour in Tours)
+            {
+                toursOrderOfOperation.Add(Tour.touring);
+            }
+
+            return toursOrderOfOperation;
         }
     }
 }

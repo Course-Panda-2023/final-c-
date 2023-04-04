@@ -11,7 +11,7 @@ namespace Zoo.Test.Section1
     {
         public void ExecuteTest()
         {
-            List<Animal> animals = new List<Animal>()
+            List<Animal> animals = new()
             {
                 new Alligator() { RaceName = "Aligator" },
                 new Duck() { RaceName = "Duck" },
@@ -35,7 +35,7 @@ namespace Zoo.Test.Section1
                 new Whale() { RaceName = "Whale" },
             };
 
-            ZooZone ZooZoneInstance = new(animals);
+            AnimalsZone ZooZoneInstance = new(animals);
 
             ZooZoneInstance.MessInZooAllAnimals();
         }

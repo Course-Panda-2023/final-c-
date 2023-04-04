@@ -1,8 +1,8 @@
-﻿using Zoo.Utils.Enum;
+﻿using Zoo.Util.Enum;
 
 namespace Zoo.Tour
 {
-    internal class PlaceOfTour
+    internal class TourPlace
     {
         private readonly Dictionary<ZooZonesType, string> places = new()
         {
@@ -14,12 +14,12 @@ namespace Zoo.Tour
 
         public ZooZonesType ZooZonesTypeZooZonesType { get; set; }
 
-        public PlaceOfTour(ZooZonesType zooZonesType)
+        public TourPlace(ZooZonesType zooZonesType)
         {
             ZooZonesTypeZooZonesType = zooZonesType;
         }
 
-        public bool IsEqual(PlaceOfTour other)
+        public bool IsEqual(TourPlace other)
         {
             return other.ZooZonesTypeZooZonesType == ZooZonesTypeZooZonesType;
         }

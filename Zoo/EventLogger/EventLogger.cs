@@ -3,7 +3,7 @@
     internal class EventLogger
     {
         private static readonly object _lockObject = new();
-        private static StreamWriter _streamWriter;
+        private static StreamWriter? _streamWriter;
         private static readonly string _path;
 
         static EventLogger()

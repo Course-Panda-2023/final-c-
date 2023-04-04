@@ -1,4 +1,4 @@
-﻿using Zoo.Utils.Enum;
+﻿using Zoo.Util.Enum;
 
 namespace Zoo.Tour
 {
@@ -17,7 +17,7 @@ namespace Zoo.Tour
 
         public Visitor(string Name)
         {
-            Random random = new Random();
+            Random random = new();
             ZooZonesType randomZone = ZooZonesType.None;
 
             int value = random.Next(1, 4);

@@ -7,10 +7,7 @@
 
         public static EventLogger GetInstance()
         {
-            if (eventLogger == null)
-            {
-                eventLogger = new EventLogger();
-            }
+            eventLogger ??= new EventLogger();
 
             return eventLogger;
         }

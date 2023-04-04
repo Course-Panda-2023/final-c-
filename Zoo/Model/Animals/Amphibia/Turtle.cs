@@ -1,4 +1,4 @@
-﻿using Zoo.Utils.Enum;
+﻿using Zoo.Util.Enum;
 
 namespace Zoo.Model.Animals.Amphibia
 {

@@ -4,26 +4,28 @@ namespace Zoo.Model.Employee
 {
     internal class Cleaner : Employee
     {
-        public event EventHandler<EmployeeEventArgs> EndsWorksAt;
+        public event EventHandler<EmployeeEventArgs>? EndsWorksAt;
 
-        public Cleaner(string DoctorName)
+        public Cleaner(string CleanerName) : base()
         {
-            EmployeeEventArgs args = new EmployeeEventArgs();
-            args.EmployeeName = DoctorName;
-            args.StartTime = 5;
-            args.DayStartingTime = this.StartingTime;
+            EmployeeEventArgs args = new()
+            {
+                EmployeeName = CleanerName,
+                StartTime = 2,
+                DayStartingTime = StartingTime
+            };
+
             EndsWorksAt += EndingWorksAt;
 
-            // Raise the event
             EndsWorksAt?.Invoke(this, args);
         }
 
-        public static void EndingWorksAt(object sender, EventArgs e)
+        public static void EndingWorksAt(object? sender, EventArgs e)
         {
-            Employee employee = sender as Employee;
-            EmployeeEventArgs args = e as EmployeeEventArgs;
+            Employee? employee = sender as Employee;
+            EmployeeEventArgs? args = e as EmployeeEventArgs;
 
-            Thread thread = new Thread(() =>
+            Thread thread = new(() =>
             {
                 Thread.Sleep(args.DayStartingTime);
                 Thread.Sleep(args.StartTime * 1000);

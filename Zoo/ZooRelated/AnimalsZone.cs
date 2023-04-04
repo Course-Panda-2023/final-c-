@@ -1,12 +1,10 @@
 ﻿using System.Runtime.InteropServices;
 using Zoo.Model.Animals;
-using Zoo.Utils.CustomException;
-using Zoo.Utils.Enum;
-using Zoo.ZooUtils.CustomException;
+using Zoo.Util.Enum;
 
 namespace Zoo.ZooRelated
 {
-    internal class ZooZone
+    internal class AnimalsZone
     {
         public string? Name { get; set; }
 
@@ -18,7 +16,7 @@ namespace Zoo.ZooRelated
         public List<Animal>? Animals;
 
 
-        public ZooZone(List<Animal> animals)
+        public AnimalsZone(List<Animal> animals)
         {
             CheckIfAnimalsAreDistinct(animals);
 
@@ -29,7 +27,7 @@ namespace Zoo.ZooRelated
             Animals = animals;
         }
 
-        public ZooZone(List<Animal> animals, ZooZonesType type)
+        public AnimalsZone(List<Animal> animals, ZooZonesType type)
         {
             CheckIfAnimalsAreDistinct(animals);
 
@@ -39,15 +37,16 @@ namespace Zoo.ZooRelated
 
             Animals = animals;
 
-            this.Type = type;
+            Type = type;
         }
 
         private void CheckIfThereAreTwoOrMoreAnimals(List<Animal> animals, Animal Animal)
         {
             int CountApperances = CountAnimalTypeInAnimals(animals, Animal.AnimalType);
             if (CountApperances >= 2)
+            {
                 throw new TwoOrMoreAnimalsFromTheSameTypeException($"There are {CountApperances} from type of {Animal.RaceName}");
-
+            }
         }
 
         // Note: Not related to this class but needed here
@@ -58,7 +57,7 @@ namespace Zoo.ZooRelated
 
         private void CheckIfAnimalsAreDistinct(List<Animal> animals)
         {
-            foreach (var animal in CollectionsMarshal.AsSpan(animals))
+            foreach (Animal? animal in CollectionsMarshal.AsSpan(animals))
             {
                 CheckIfThereAreTwoOrMoreAnimals(animals, animal);
             }
@@ -66,30 +65,34 @@ namespace Zoo.ZooRelated
 
         private void CheckIfForEachZoneMoreAtLeastThreeAnimals(List<Animal> animals)
         {
-            var ZoneAndItsAnimals = GetAnimalsInZone(animals);
+            Dictionary<ZooZonesType, List<Animal>> ZoneAndItsAnimals = GetAnimalsInZone(animals);
 
-            foreach (var zoneType in ZoneAndItsAnimals.Keys)
+            foreach (ZooZonesType zoneType in ZoneAndItsAnimals.Keys)
             {
                 int ZoneCount = ZoneAndItsAnimals[zoneType].Count;
                 if (ZoneCount < 3)
+                {
                     throw new LessThanTwoAnimalsInCertainZoneException($"There are {ZoneCount} in zone {zoneType}");
+                }
             }
         }
 
         private void CheckIfAnimalRelatedToThisZone(List<Animal> animals)
         {
-            foreach (var animal in animals)
+            foreach (Animal animal in animals)
             {
                 if (animal.GrowingUpZone == Type)
+                {
                     throw new AnimalDoesNotRelatedToException($"Animal from Race {animal.RaceName} are not related to zon {Type}" +
                         $"its zone is {animal.GrowingUpZone}");
+                }
             }
         }
 
 
         public void MessInZooAllAnimals()
         {
-            foreach (var animal in CollectionsMarshal.AsSpan(Animals))
+            foreach (Animal? animal in CollectionsMarshal.AsSpan(Animals))
             {
                 animal.MakeSound();
             }
