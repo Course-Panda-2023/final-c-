@@ -37,4 +37,6 @@ public abstract class Worker : ITimeSubscriber
     public abstract AreaType? GetWorkingArea();
 
     public abstract int GetWorkTime();
+
+    public abstract bool IsCurrentlyWorking();
 }

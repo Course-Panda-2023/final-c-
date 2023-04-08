@@ -49,4 +49,9 @@ public class Cleaner : Worker
     {
         return 2;
     }
+
+    public override bool IsCurrentlyWorking()
+    {
+        return _currentlyWorking;
+    }
 }

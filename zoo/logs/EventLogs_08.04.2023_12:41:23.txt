@@ -1,0 +1,43 @@
+Doctor1 works in area SEA at time 7
+Doctor1 works in area AIR at time 111
+Doctor1 works in area GROUND at time 15
+Doctor1 works in area MIXED at time 13
+Cleaner1 works in area SEA at time 30
+Cleaner1 works in area MIXED at time 29
+Cleaner1 works in area AIR at time 42
+Cleaner1 works in area GROUND at time 46
+Feeder1 works in area SEA at time 54
+Feeder1 works in area MIXED at time 18
+Feeder1 works in area AIR at time 70
+Feeder1 works in area GROUND at time 103
+Doctor2 works in area MIXED at time 30
+Doctor2 works in area AIR at time 103
+Doctor2 works in area GROUND at time 5
+Doctor2 works in area SEA at time 112
+Cleaner2 works in area MIXED at time 32
+Cleaner2 works in area GROUND at time 4
+Cleaner2 works in area AIR at time 52
+Cleaner2 works in area SEA at time 59
+Feeder2 works in area AIR at time 17
+Feeder2 works in area SEA at time 105
+Feeder2 works in area MIXED at time 66
+Feeder2 works in area GROUND at time 20
+Zoo has made 50$ so far in day 0
+Tour started in area AIR
+Zoo has made 100$ so far in day 0
+Tour started in area AIR
+Tour that should've started in area AIR couldn't be launched
+Zoo has made 150$ so far in day 0
+Tour started in area MIXED
+Cleaner2 is cleaning the area GROUND
+Tour that should've started in area AIR couldn't be launched
+Doctor2 is treating the animal zerba1
+Zebra zerba1
+Zoo has made 200$ so far in day 0
+Tour started in area MIXED
+Cleaner2 finished cleaning the area GROUND
+Zoo has made 250$ so far in day 0
+Tour started in area SEA
+Doctor1 is treating the animal whale1
+Whale whale1
+Tour in area SEA that started at time 7 has paused

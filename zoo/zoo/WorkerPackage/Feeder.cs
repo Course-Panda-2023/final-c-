@@ -5,22 +5,22 @@ using zoo.ManagerPackage;
 namespace zoo.WorkerPackage;
 
 
-public class Doctor : AnimalTherapist
+public class Feeder : AnimalTherapist
 {
     private int _workStartTime;
     private Animal? _animal;
     private bool _currentlyWorking = false;
     
-    public Doctor(string name, LogMessage logger) : base(name, logger)
+    public Feeder(string name, LogMessage logger) : base(name, logger)
     {
         
     }
-    
+
     public override void Treat(Animal animal, int time)
     {
         if (animal.IsBeingThreaten())
         {
-            _logger($"Animal {animal.Name} can't be threaten by {Name} because it's already being threaten by another work");
+            _logger($"Animal {animal.Name} can't be fed by {Name} because it's already being threaten by another work");
         }
         else
         {
@@ -28,8 +28,8 @@ public class Doctor : AnimalTherapist
             _animal = animal;
             _animal.SetTherapist(this);
             _currentlyWorking = true;
-
-            _logger($"{Name} is treating the animal {_animal.Name}");
+            
+            _logger($"{Name} is feeding the animal {_animal.Name}");
             _animal.MakeSound();
             
             this.OnWorkStart();
@@ -42,7 +42,7 @@ public class Doctor : AnimalTherapist
         {
             if (time - _workStartTime == GetWorkTime())
             {
-                _logger($"{Name} finished treating the animal {_animal?.Name}");
+                _logger($"{Name} finished feeding the animal {_animal?.Name}");
                 _animal?.SetTherapist(null);
                 _animal = null;
                 _currentlyWorking = false;
@@ -59,6 +59,11 @@ public class Doctor : AnimalTherapist
 
     public override int GetWorkTime()
     {
-        return 5;
+        return 10;
+    }
+
+    public override bool IsCurrentlyWorking()
+    {
+        return _currentlyWorking;
     }
 }

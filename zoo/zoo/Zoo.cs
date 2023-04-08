@@ -13,12 +13,15 @@ public class Zoo : ITimeSubscriber
     private readonly IEnumerable<Worker> _workers;
     private readonly int _daytime;
     private readonly AreaType[] _areas;
+    private readonly int _numPeopleInTour = 5;
 
     private readonly IDictionary<Worker, IDictionary<AreaType, int>> _workersSchedule =
         new Dictionary<Worker, IDictionary<AreaType, int>>();
 
     private readonly IDictionary<AreaType, List<Tour>> _tours = new Dictionary<AreaType, List<Tour>>();
     private readonly LogMessage _logger;
+
+    private float _dayRevenue = 0;
 
     public Zoo(IEnumerable<Animal> animals, IEnumerable<Worker> workers, int daytime, AreaType[] areas, LogMessage logger)
     {
@@ -119,6 +122,37 @@ public class Zoo : ITimeSubscriber
         }
     }
 
+    private float GetTourRevenue(Tour tour)
+    {
+        AreaType area = tour.Area;
+
+        IEnumerable<Worker> relevantWorkers =
+            _workers.Where(worker => worker.IsCurrentlyWorking() && worker.GetWorkingArea() == area);
+
+        bool fed = relevantWorkers.Count(worker => worker is Feeder) > 0;
+        bool threaten = relevantWorkers.Count(worker => worker is Doctor) > 0;
+        bool cleaned = relevantWorkers.Count(worker => worker is Cleaner) > 0;
+
+        if (threaten)
+        {
+            return _numPeopleInTour * 20;
+        }
+
+        if (cleaned)
+        {
+            return _numPeopleInTour * 30;
+        }
+
+        if (!fed)
+        {
+            return _numPeopleInTour * 50;
+        }
+        
+        // animals are being fed in the area
+
+        return _numPeopleInTour * 100;
+    }
+
     public void OnTimeStamp(int time)
     {
         Tour tour = new Tour(areas:_areas, logger:_logger);
@@ -126,6 +160,7 @@ public class Zoo : ITimeSubscriber
         if (CanTourStart(tour))
         {
             _tours[tour.Area].Add(tour);
+            _dayRevenue += GetTourRevenue(tour);
 
             foreach (Worker worker in _workers)
             {
@@ -177,7 +212,9 @@ public class Zoo : ITimeSubscriber
         if (time % _daytime == 0)
         {
             // a day has been passed, set the next day schedule for the workers
-            SetWorkersSchedule(day:time/_daytime);
+            _logger($"Zoo has made {_dayRevenue}$ in day {Convert.ToInt32(time / _daytime)}");
+            SetWorkersSchedule(day:time / _daytime);
+            _dayRevenue = 0;
         }
     }
 }
