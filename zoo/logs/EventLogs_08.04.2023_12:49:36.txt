@@ -1,0 +1,149 @@
+Doctor1 works in area SEA at time 105
+Doctor1 works in area AIR at time 59
+Doctor1 works in area GROUND at time 23
+Doctor1 works in area MIXED at time 94
+Cleaner1 works in area SEA at time 10
+Cleaner1 works in area GROUND at time 28
+Cleaner1 works in area MIXED at time 44
+Cleaner1 works in area AIR at time 67
+Feeder1 works in area MIXED at time 13
+Feeder1 works in area GROUND at time 25
+Feeder1 works in area AIR at time 92
+Feeder1 works in area SEA at time 30
+Tour started in area AIR
+Tour started in area SEA
+Tour started in area AIR
+Tour that should've started in area GROUND couldn't be launched
+Tour that should've started in area AIR couldn't be launched
+Tour that should've started in area AIR couldn't be launched
+Tour started in area SEA
+Tour that should've started in area GROUND couldn't be launched
+Tour that should've started in area AIR couldn't be launched
+Tour that should've started in area GROUND couldn't be launched
+Tour in area AIR that started at time 1 has ended
+Cleaner1 is cleaning the area SEA
+Tour in area SEA that started at time 2 has paused
+Tour in area SEA that started at time 7 has paused
+Tour started in area MIXED
+Tour started in area MIXED
+Tour in area AIR that started at time 3 has ended
+Cleaner1 finished cleaning the area SEA
+Tour that should've started in area MIXED couldn't be launched
+Feeder1 is feeding the animal alligator1
+Alligator alligator1
+Tour in area MIXED that started at time 11 has paused
+Tour in area MIXED that started at time 12 has paused
+Tour that should've started in area MIXED couldn't be launched
+Tour that should've started in area MIXED couldn't be launched
+Tour that should've started in area AIR couldn't be launched
+Tour that should've started in area MIXED couldn't be launched
+Tour that should've started in area MIXED couldn't be launched
+Tour that should've started in area AIR couldn't be launched
+Tour that should've started in area SEA couldn't be launched
+Tour that should've started in area AIR couldn't be launched
+Tour that should've started in area MIXED couldn't be launched
+Tour that should've started in area AIR couldn't be launched
+Feeder1 finished feeding the animal alligator1
+Doctor1 is treating the animal kangaroo1
+Kangaroo kangaroo1
+Tour that should've started in area GROUND couldn't be launched
+Tour that should've started in area GROUND couldn't be launched
+Feeder1 is feeding the animal giraffe1
+Giraffe giraffe1
+Tour that should've started in area MIXED couldn't be launched
+Tour that should've started in area SEA couldn't be launched
+Tour that should've started in area SEA couldn't be launched
+Doctor1 finished treating the animal kangaroo1
+Tour that should've started in area SEA couldn't be launched
+Tour that should've started in area SEA couldn't be launched
+Cleaner1 finished cleaning the area GROUND
+Dolphin dolphin1
+Tour in area SEA that started at time 2 has paused
+Tour in area SEA that started at time 7 has paused
+Tour that should've started in area GROUND couldn't be launched
+Tour that should've started in area MIXED couldn't be launched
+Tour that should've started in area SEA couldn't be launched
+Tour that should've started in area SEA couldn't be launched
+Tour that should've started in area GROUND couldn't be launched
+Tour that should've started in area SEA couldn't be launched
+Tour that should've started in area GROUND couldn't be launched
+Tour that should've started in area MIXED couldn't be launched
+Tour that should've started in area AIR couldn't be launched
+Tour that should've started in area GROUND couldn't be launched
+Feeder1 finished feeding the animal dolphin1
+Tour that should've started in area AIR couldn't be launched
+Tour that should've started in area SEA couldn't be launched
+Tour that should've started in area SEA couldn't be launched
+Tour that should've started in area SEA couldn't be launched
+Cleaner1 is cleaning the area MIXED
+Tour in area MIXED that started at time 11 has paused
+Tour in area MIXED that started at time 12 has paused
+Tour that should've started in area GROUND couldn't be launched
+Tour that should've started in area SEA couldn't be launched
+Cleaner1 finished cleaning the area MIXED
+Tour that should've started in area GROUND couldn't be launched
+Tour that should've started in area SEA couldn't be launched
+Tour that should've started in area GROUND couldn't be launched
+Tour that should've started in area SEA couldn't be launched
+Tour that should've started in area AIR couldn't be launched
+Tour that should've started in area MIXED couldn't be launched
+Tour that should've started in area MIXED couldn't be launched
+Tour that should've started in area AIR couldn't be launched
+Tour that should've started in area SEA couldn't be launched
+Tour that should've started in area AIR couldn't be launched
+Tour that should've started in area AIR couldn't be launched
+Tour that should've started in area GROUND couldn't be launched
+Tour that should've started in area GROUND couldn't be launched
+Doctor1 is treating the animal hawk1
+Hawk hawk1
+Tour in area AIR that started at time 1 has paused
+Tour in area AIR that started at time 3 has paused
+Tour that should've started in area MIXED couldn't be launched
+Tour that should've started in area AIR couldn't be launched
+Tour that should've started in area SEA couldn't be launched
+Tour that should've started in area GROUND couldn't be launched
+Tour that should've started in area MIXED couldn't be launched
+Doctor1 finished treating the animal hawk1
+Tour that should've started in area SEA couldn't be launched
+Tour that should've started in area MIXED couldn't be launched
+Tour that should've started in area MIXED couldn't be launched
+Cleaner1 is cleaning the area AIR
+Tour in area AIR that started at time 1 has paused
+Tour in area AIR that started at time 3 has paused
+Tour that should've started in area MIXED couldn't be launched
+Tour that should've started in area SEA couldn't be launched
+Cleaner1 finished cleaning the area AIR
+Tour that should've started in area GROUND couldn't be launched
+Tour that should've started in area SEA couldn't be launched
+Tour that should've started in area SEA couldn't be launched
+Tour that should've started in area MIXED couldn't be launched
+Tour that should've started in area AIR couldn't be launched
+Tour that should've started in area GROUND couldn't be launched
+Tour that should've started in area SEA couldn't be launched
+Tour that should've started in area AIR couldn't be launched
+Tour that should've started in area MIXED couldn't be launched
+Tour that should've started in area SEA couldn't be launched
+Tour that should've started in area GROUND couldn't be launched
+Tour that should've started in area SEA couldn't be launched
+Tour that should've started in area SEA couldn't be launched
+Tour that should've started in area AIR couldn't be launched
+Tour that should've started in area MIXED couldn't be launched
+Tour that should've started in area GROUND couldn't be launched
+Tour that should've started in area MIXED couldn't be launched
+Tour that should've started in area AIR couldn't be launched
+Tour that should've started in area SEA couldn't be launched
+Tour that should've started in area GROUND couldn't be launched
+Tour that should've started in area SEA couldn't be launched
+Tour that should've started in area GROUND couldn't be launched
+Tour that should've started in area AIR couldn't be launched
+Feeder1 is feeding the animal pelican1
+Pelican pelican1
+Tour in area AIR that started at time 1 has paused
+Tour in area AIR that started at time 3 has paused
+Tour that should've started in area AIR couldn't be launched
+Tour that should've started in area SEA couldn't be launched
+Doctor1 is treating the animal hippopotamus1
+Hippopotamus hippopotamus1
+Tour in area MIXED that started at time 11 has paused
+Tour in area MIXED that started at time 12 has paused
+Tour that should've started in area MIXED couldn't be launched

@@ -67,7 +67,7 @@ public class Zoo : ITimeSubscriber
             {
                 _workersSchedule[worker][_areas[areasShuffle[i]]] = day * _daytime + uniqueRandomNumbers[i];
                 
-                _logger($"{worker.Name} works in area {_areas[areasShuffle[i]]} at time {_workersSchedule[worker][_areas[areasShuffle[i]]]}");
+                // _logger($"{worker.Name} works in area {_areas[areasShuffle[i]]} at time {_workersSchedule[worker][_areas[areasShuffle[i]]]}");
             }
         }
     }
@@ -81,6 +81,7 @@ public class Zoo : ITimeSubscriber
     {
         if (GetActiveToursInArea(tour.Area).Count >= 2)
         {
+            Console.WriteLine("1");
             return false;
         }
 
@@ -175,7 +176,7 @@ public class Zoo : ITimeSubscriber
         }
         else
         {
-            _logger($"Tour that should've started in area {tour.Area} couldn't be launched");
+            _logger($"Tour that should've start in area {tour.Area} couldn't be launched");
         }
 
         foreach (AreaType area in _areas)

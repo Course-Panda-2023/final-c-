@@ -19,10 +19,7 @@ List<Worker> workers = new List<Worker>
 {
     new Doctor("Doctor1", logger),
     new Cleaner("Cleaner1", logger),
-    new Feeder("Feeder1", logger),
-    new Doctor("Doctor2", logger),
-    new Cleaner("Cleaner2", logger),
-    new Feeder("Feeder2", logger)
+    new Feeder("Feeder1", logger)
 };
 
 List<Animal> animals = new List<Animal>

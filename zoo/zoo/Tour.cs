@@ -35,8 +35,8 @@ public class Tour : ITimeSubscriber
         {
             _timePassed += _areaWorkers.Count == 0 ? 1 : 0;
         }
-
-        if (_timePassed == 10)
+        
+        if (!HasFinished && _timePassed == 10)
         {
             _logger($"Tour in area {Area} that started at time {_startTime} has ended");
             HasFinished = true;
@@ -59,15 +59,14 @@ public class Tour : ITimeSubscriber
     
     public void OnWorkerEnd(Worker worker)
     {
-        if (worker.GetWorkingArea() != Area)
-        {
-            return;
-        }
-        
         lock (_lock)
         {
             _areaWorkers.Remove(worker);
-            _logger($"Tour in area {Area} that started at time {_startTime} has continued");
+
+            if (_areaWorkers.Count == 0)
+            {
+                _logger($"Tour in area {Area} that started at time {_startTime} has continued");
+            }
         }
     }
 }

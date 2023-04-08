@@ -1,0 +1,328 @@
+Tour started in area SEA
+Tour started in area AIR
+Tour started in area AIR
+Tour that should've start in area GROUND couldn't be launched
+Tour that should've start in area GROUND couldn't be launched
+Tour started in area SEA
+Tour that should've start in area GROUND couldn't be launched
+Tour that should've start in area GROUND couldn't be launched
+Tour that should've start in area AIR couldn't be launched
+Tour started in area MIXED
+Tour in area SEA that started at time 1 has ended
+Tour that should've start in area GROUND couldn't be launched
+Tour in area AIR that started at time 2 has ended
+Tour that should've start in area AIR couldn't be launched
+Tour in area AIR that started at time 3 has ended
+Tour that should've start in area AIR couldn't be launched
+Tour that should've start in area GROUND couldn't be launched
+Tour started in area SEA
+Tour in area SEA that started at time 6 has ended
+Tour started in area MIXED
+Tour started in area SEA
+Tour that should've start in area SEA couldn't be launched
+Tour that should've start in area GROUND couldn't be launched
+Tour in area MIXED that started at time 10 has ended
+Tour started in area MIXED
+Tour that should've start in area AIR couldn't be launched
+Tour that should've start in area MIXED couldn't be launched
+Tour that should've start in area MIXED couldn't be launched
+Tour that should've start in area AIR couldn't be launched
+Tour in area SEA that started at time 15 has ended
+Tour that should've start in area MIXED couldn't be launched
+Tour in area MIXED that started at time 16 has ended
+Tour in area SEA that started at time 17 has ended
+Tour started in area SEA
+Tour that should've start in area AIR couldn't be launched
+Tour that should've start in area SEA couldn't be launched
+Tour in area MIXED that started at time 20 has ended
+Tour that should've start in area SEA couldn't be launched
+Tour that should've start in area SEA couldn't be launched
+Tour started in area MIXED
+Tour started in area MIXED
+Tour that should've start in area MIXED couldn't be launched
+Tour that should've start in area SEA couldn't be launched
+Tour in area SEA that started at time 26 has ended
+Tour that should've start in area AIR couldn't be launched
+Tour in area SEA that started at time 27 has ended
+Tour that should've start in area MIXED couldn't be launched
+Tour that should've start in area AIR couldn't be launched
+Tour that should've start in area MIXED couldn't be launched
+Tour that should've start in area MIXED couldn't be launched
+Tour in area MIXED that started at time 32 has ended
+Tour that should've start in area AIR couldn't be launched
+Tour in area MIXED that started at time 33 has ended
+Tour started in area AIR
+Tour started in area SEA
+Cleaner1 is cleaning the area MIXED
+Tour in area MIXED that started at time 10 has paused
+Tour in area MIXED that started at time 16 has paused
+Tour in area MIXED that started at time 20 has paused
+Tour in area MIXED that started at time 32 has paused
+Tour in area MIXED that started at time 33 has paused
+Tour started in area AIR
+Tour that should've start in area AIR couldn't be launched
+Cleaner1 finished cleaning the area MIXED
+Tour in area SEA that started at time 1 has continued
+Tour in area AIR that started at time 2 has continued
+Tour in area AIR that started at time 3 has continued
+Tour in area SEA that started at time 6 has continued
+Tour in area MIXED that started at time 10 has continued
+Doctor1 is treating the animal giraffe1
+Tour in area SEA that started at time 15 has continued
+Tour in area MIXED that started at time 16 has continued
+Giraffe giraffe1
+Tour in area SEA that started at time 17 has continued
+Tour in area MIXED that started at time 20 has continued
+Tour in area SEA that started at time 26 has continued
+Tour in area GROUND that started at time 41 has paused
+Tour in area SEA that started at time 27 has continued
+Tour in area MIXED that started at time 32 has continued
+Tour in area MIXED that started at time 33 has continued
+Tour in area AIR that started at time 43 has continued
+Tour in area SEA that started at time 44 has continued
+Tour in area AIR that started at time 45 has continued
+Tour that should've start in area AIR couldn't be launched
+Tour that should've start in area GROUND couldn't be launched
+Tour started in area MIXED
+Tour that should've start in area AIR couldn't be launched
+Tour started in area MIXED
+Cleaner1 is cleaning the area GROUND
+Tour in area GROUND that started at time 41 has paused
+Doctor1 finished treating the animal giraffe1
+Tour in area SEA that started at time 1 has continued
+Tour in area AIR that started at time 2 has continued
+Tour in area AIR that started at time 3 has continued
+Tour in area SEA that started at time 6 has continued
+Tour in area MIXED that started at time 10 has continued
+Tour in area SEA that started at time 15 has continued
+Tour in area MIXED that started at time 16 has continued
+Tour in area SEA that started at time 17 has continued
+Tour in area MIXED that started at time 20 has continued
+Tour in area SEA that started at time 26 has continued
+Tour in area SEA that started at time 27 has continued
+Tour in area MIXED that started at time 32 has continued
+Tour in area MIXED that started at time 33 has continued
+Tour in area AIR that started at time 43 has continued
+Tour in area SEA that started at time 44 has continued
+Tour in area AIR that started at time 45 has continued
+Tour in area MIXED that started at time 49 has continued
+Tour in area MIXED that started at time 51 has continued
+Tour that should've start in area GROUND couldn't be launched
+Tour in area AIR that started at time 43 has ended
+Tour that should've start in area MIXED couldn't be launched
+Tour in area SEA that started at time 44 has ended
+Cleaner1 finished cleaning the area GROUND
+Tour in area SEA that started at time 1 has continued
+Tour in area AIR that started at time 2 has continued
+Tour in area AIR that started at time 3 has continued
+Tour in area SEA that started at time 6 has continued
+Tour in area MIXED that started at time 10 has continued
+Tour in area SEA that started at time 15 has continued
+Tour in area MIXED that started at time 16 has continued
+Tour in area SEA that started at time 17 has continued
+Tour in area MIXED that started at time 20 has continued
+Tour in area SEA that started at time 26 has continued
+Tour in area SEA that started at time 27 has continued
+Tour in area MIXED that started at time 32 has continued
+Tour in area MIXED that started at time 33 has continued
+Tour in area GROUND that started at time 41 has continued
+Tour in area AIR that started at time 43 has continued
+Tour in area SEA that started at time 44 has continued
+Tour in area AIR that started at time 45 has continued
+Tour in area MIXED that started at time 49 has continued
+Tour in area MIXED that started at time 51 has continued
+Tour that should've start in area GROUND couldn't be launched
+Tour in area AIR that started at time 45 has ended
+Tour started in area SEA
+Tour that should've start in area AIR couldn't be launched
+Tour that should've start in area GROUND couldn't be launched
+Tour in area GROUND that started at time 41 has ended
+Tour that should've start in area AIR couldn't be launched
+Tour in area MIXED that started at time 49 has ended
+Tour that should've start in area GROUND couldn't be launched
+Tour started in area SEA
+Tour in area MIXED that started at time 51 has ended
+Tour started in area MIXED
+Tour that should've start in area GROUND couldn't be launched
+Tour that should've start in area AIR couldn't be launched
+Tour in area SEA that started at time 55 has ended
+Tour that should've start in area MIXED couldn't be launched
+Tour started in area SEA
+Tour that should've start in area AIR couldn't be launched
+Tour that should've start in area MIXED couldn't be launched
+Tour that should've start in area GROUND couldn't be launched
+Tour in area SEA that started at time 60 has ended
+Tour that should've start in area MIXED couldn't be launched
+Tour in area MIXED that started at time 61 has ended
+Tour that should've start in area AIR couldn't be launched
+Tour that should've start in area AIR couldn't be launched
+Tour started in area MIXED
+Tour in area MIXED that started at time 64 has ended
+Tour that should've start in area GROUND couldn't be launched
+Tour that should've start in area GROUND couldn't be launched
+Tour in area SEA that started at time 66 has ended
+Tour started in area SEA
+Tour started in area SEA
+Tour that should've start in area AIR couldn't be launched
+Tour started in area MIXED
+Tour that should've start in area GROUND couldn't be launched
+Tour that should've start in area GROUND couldn't be launched
+Tour that should've start in area AIR couldn't be launched
+Tour in area MIXED that started at time 73 has ended
+Tour started in area MIXED
+Tour that should've start in area SEA couldn't be launched
+Tour that should've start in area SEA couldn't be launched
+Tour in area SEA that started at time 76 has ended
+Tour that should've start in area AIR couldn't be launched
+Tour in area SEA that started at time 77 has ended
+Tour that should've start in area AIR couldn't be launched
+Tour that should've start in area MIXED couldn't be launched
+Tour in area MIXED that started at time 79 has ended
+Doctor1 is treating the animal turtle1
+Turtle turtle1
+Tour in area MIXED that started at time 10 has paused
+Tour in area MIXED that started at time 16 has paused
+Tour in area MIXED that started at time 20 has paused
+Tour in area MIXED that started at time 32 has paused
+Tour in area MIXED that started at time 33 has paused
+Tour in area MIXED that started at time 49 has paused
+Tour in area MIXED that started at time 51 has paused
+Tour in area MIXED that started at time 61 has paused
+Tour in area MIXED that started at time 64 has paused
+Tour in area MIXED that started at time 73 has paused
+Tour in area MIXED that started at time 79 has paused
+Tour in area MIXED that started at time 83 has paused
+Tour started in area SEA
+Tour that should've start in area AIR couldn't be launched
+Tour started in area SEA
+Tour started in area MIXED
+Tour that should've start in area MIXED couldn't be launched
+Doctor1 finished treating the animal turtle1
+Tour in area SEA that started at time 1 has continued
+Tour in area AIR that started at time 2 has continued
+Tour in area AIR that started at time 3 has continued
+Tour in area SEA that started at time 6 has continued
+Tour in area MIXED that started at time 10 has continued
+Tour in area SEA that started at time 15 has continued
+Tour in area MIXED that started at time 16 has continued
+Tour in area SEA that started at time 17 has continued
+Tour in area MIXED that started at time 20 has continued
+Tour in area SEA that started at time 26 has continued
+Tour in area SEA that started at time 27 has continued
+Tour in area MIXED that started at time 32 has continued
+Tour in area MIXED that started at time 33 has continued
+Tour in area GROUND that started at time 41 has continued
+Tour in area AIR that started at time 43 has continued
+Tour in area SEA that started at time 44 has continued
+Tour in area AIR that started at time 45 has continued
+Tour in area MIXED that started at time 49 has continued
+Tour in area MIXED that started at time 51 has continued
+Tour in area SEA that started at time 55 has continued
+Tour in area SEA that started at time 60 has continued
+Tour in area MIXED that started at time 61 has continued
+Tour in area MIXED that started at time 64 has continued
+Tour in area SEA that started at time 66 has continued
+Tour in area MIXED that started at time 73 has continued
+Tour in area SEA that started at time 76 has continued
+Tour in area SEA that started at time 77 has continued
+Tour in area MIXED that started at time 79 has continued
+Tour in area MIXED that started at time 83 has continued
+Tour in area SEA that started at time 89 has continued
+Tour in area SEA that started at time 91 has continued
+Tour in area MIXED that started at time 92 has continued
+Tour that should've start in area GROUND couldn't be launched
+Tour that should've start in area AIR couldn't be launched
+Tour that should've start in area AIR couldn't be launched
+Tour that should've start in area MIXED couldn't be launched
+Tour in area MIXED that started at time 83 has ended
+Tour started in area MIXED
+Tour in area SEA that started at time 89 has ended
+Tour that should've start in area MIXED couldn't be launched
+Tour that should've start in area AIR couldn't be launched
+Tour in area SEA that started at time 91 has ended
+Tour started in area SEA
+Tour in area MIXED that started at time 92 has ended
+Tour that should've start in area GROUND couldn't be launched
+Tour started in area MIXED
+Feeder1 is feeding the animal turtle1
+Turtle turtle1
+Tour in area MIXED that started at time 10 has paused
+Tour in area MIXED that started at time 16 has paused
+Tour in area MIXED that started at time 20 has paused
+Tour in area MIXED that started at time 32 has paused
+Tour in area MIXED that started at time 33 has paused
+Tour in area MIXED that started at time 49 has paused
+Tour in area MIXED that started at time 51 has paused
+Tour in area MIXED that started at time 61 has paused
+Tour in area MIXED that started at time 64 has paused
+Tour in area MIXED that started at time 73 has paused
+Tour in area MIXED that started at time 79 has paused
+Tour in area MIXED that started at time 83 has paused
+Tour in area MIXED that started at time 92 has paused
+Tour in area MIXED that started at time 98 has paused
+Tour in area MIXED that started at time 103 has paused
+Tour that should've start in area AIR couldn't be launched
+Tour that should've start in area MIXED couldn't be launched
+Doctor1 is treating the animal whale1
+Whale whale1
+Tour in area SEA that started at time 1 has paused
+Tour in area SEA that started at time 6 has paused
+Tour in area SEA that started at time 15 has paused
+Tour in area SEA that started at time 17 has paused
+Tour in area SEA that started at time 26 has paused
+Tour in area SEA that started at time 27 has paused
+Tour in area SEA that started at time 44 has paused
+Tour in area SEA that started at time 55 has paused
+Tour in area SEA that started at time 60 has paused
+Tour in area SEA that started at time 66 has paused
+Tour in area SEA that started at time 76 has paused
+Tour in area SEA that started at time 77 has paused
+Tour in area SEA that started at time 89 has paused
+Tour in area SEA that started at time 91 has paused
+Tour in area SEA that started at time 101 has paused
+Tour that should've start in area AIR couldn't be launched
+Feeder1 is feeding the animal zerba1
+Zebra zerba1
+Tour in area GROUND that started at time 41 has paused
+Tour that should've start in area AIR couldn't be launched
+Tour that should've start in area AIR couldn't be launched
+Tour that should've start in area GROUND couldn't be launched
+Feeder1 is feeding the animal vulture1
+Vulture vulture1
+Tour in area AIR that started at time 2 has paused
+Tour in area AIR that started at time 3 has paused
+Tour in area AIR that started at time 43 has paused
+Tour in area AIR that started at time 45 has paused
+Tour started in area SEA
+Feeder1 is feeding the animal pufferfish1
+Doctor1 finished treating the animal whale1
+Tour in area SEA that started at time 1 has continued
+Tour in area SEA that started at time 6 has continued
+Tour in area SEA that started at time 15 has continued
+Tour in area SEA that started at time 17 has continued
+Pufferfish pufferfish1
+Tour in area SEA that started at time 26 has continued
+Tour in area SEA that started at time 1 has paused
+Tour in area SEA that started at time 27 has continued
+Tour in area SEA that started at time 6 has paused
+Tour in area SEA that started at time 44 has continued
+Tour in area SEA that started at time 15 has paused
+Tour in area SEA that started at time 55 has continued
+Tour in area SEA that started at time 60 has continued
+Tour in area SEA that started at time 66 has continued
+Tour in area SEA that started at time 76 has continued
+Tour in area SEA that started at time 44 has paused
+ed
+Tour in area SEA that started at time 89 has continued
+Tour in area SEA that started at time 55 has paused
+ed
+Tour in area SEA that started at time 101 has continued
+Tour in area SEA that started at time 66 has paused
+Tour in area SEA that started at time 110 has continued
+Tour in area SEA that started at time 77 has paused
+Tour in area SEA that started at time 89 has paused
+Tour in area SEA that started at time 91 has paused
+Tour in area SEA that started at time 101 has paused
+Tour in area SEA that started at time 110 has paused
+Tour that should've start in area GROUND couldn't be launched
+Tour that should've start in area MIXED couldn't be launched
