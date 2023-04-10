@@ -2,7 +2,7 @@
 
 namespace Zoo.Tour
 {
-    internal class TourPlace
+    internal sealed class TourPlace
     {
         private readonly Dictionary<ZonesType, string> places = new()
         {

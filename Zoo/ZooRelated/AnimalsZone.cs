@@ -5,7 +5,7 @@ using Zoo.Util.CustomException;
 
 namespace Zoo.ZooRelated
 {
-    internal class AnimalsZone
+    internal sealed class AnimalsZone
     {
         public string? Name { get; set; }
 

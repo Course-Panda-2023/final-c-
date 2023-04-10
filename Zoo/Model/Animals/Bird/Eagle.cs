@@ -2,7 +2,7 @@
 
 namespace Zoo.Model.Animals.Bird
 {
-    internal class Eagle : BirdAnimal
+    internal sealed class Eagle : BirdAnimal
     {
         private readonly string Sound = "WeeewweewWee";
 

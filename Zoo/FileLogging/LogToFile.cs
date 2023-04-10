@@ -3,11 +3,13 @@ using System.Text;
 
 namespace Zoo.EventLogger
 {
-    internal class LogToFile
+    internal sealed class LogToFile
     {
         private readonly object LogLock = new();
         private StreamWriter? StreamWriter;
-        private readonly string FilePath;
+        private readonly string? FilePath;
+
+        public LogToFile() {}
 
         private string GetFormattedDate(DateTime date)
         {

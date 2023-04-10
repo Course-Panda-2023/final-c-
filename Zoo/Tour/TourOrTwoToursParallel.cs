@@ -8,7 +8,7 @@ namespace Zoo.Tour
     /// <summary>
     /// class represents one tour or two tours at the same time
     /// </summary>
-    internal class TourOrTwoToursParallel
+    internal sealed class TourOrTwoToursParallel
     {
         public Action touring;
 

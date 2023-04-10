@@ -2,7 +2,7 @@
 
 namespace Zoo
 {
-    internal class ApplicationConstants
+    internal sealed class ApplicationConstants
     {
         internal readonly Dictionary<ZonesType, string> Places = new()
         {

@@ -3,7 +3,7 @@ using Zoo.Tour;
 
 namespace Zoo.ZooRelated
 {
-    internal class ZooTimingScheduler
+    internal sealed class ZooTimingScheduler
     {
         public List<AnimalsZone> AnimalsZones = new();
 

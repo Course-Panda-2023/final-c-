@@ -2,7 +2,7 @@
 
 namespace Zoo.Model.Animals.Amphibia
 {
-    internal class Turtle : AmphiniaAnimal
+    internal sealed class Turtle : AmphiniaAnimal
     {
         private readonly string Sound = "NinjaTurtle";
 

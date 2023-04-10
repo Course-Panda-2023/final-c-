@@ -2,7 +2,7 @@
 
 namespace Zoo.Tour
 {
-    internal class Visitor
+    internal sealed class Visitor
     {
         public string? Name { get; init; }
 

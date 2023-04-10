@@ -2,7 +2,7 @@
 
 namespace Zoo.Model.Animals.SeaCreature
 {
-    internal class Dolphin : SeaCreatureAnimal
+    internal sealed class Dolphin : SeaCreatureAnimal
     {
         private readonly string Sound = "LogLOgggggoso";
 

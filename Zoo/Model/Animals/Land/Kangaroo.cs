@@ -2,7 +2,7 @@
 
 namespace Zoo.Model.Animals.Land
 {
-    internal class Kangaroo : LandAnimal
+    internal sealed class Kangaroo : LandAnimal
     {
         private readonly string Sound = "Kanggooooo";
 

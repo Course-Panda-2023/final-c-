@@ -7,7 +7,7 @@ using Zoo.ZooRelated;
 
 namespace Zoo.Test.Section1
 {
-    internal class IntegrationTest
+    internal sealed class IntegrationTest
     {
         public void ExecuteTest()
         {

@@ -10,7 +10,7 @@ using Zoo.ZooRelated;
 
 namespace Zoo.Test.Section2
 {
-    internal class IntegrationTest
+    internal sealed class IntegrationTest
     {
 
         public Dictionary<ZonesType, List<Animal>> GetAnimalsInZone(List<Animal> animals)
