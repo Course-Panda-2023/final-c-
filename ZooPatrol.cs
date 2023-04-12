@@ -16,12 +16,13 @@ namespace CSharp_Zoo
         private readonly int[,] _constraintsTable = new int[,] { { 1, 0, 0, 1 }, { 0, 1, 1, 0 }, { 0, 1, 1, 1 }, { 1, 0, 1, 1 } };
         private readonly int[] _numPatrols = new int[] { 0, 0, 0, 0 };
         private readonly int[] _numWorkersOnPatrol = new int[] { 0, 0, 0, 0 };
-        private readonly Dictionary<int, List<ZooWorker>> _workersByZone = new Dictionary<int, List<ZooWorker>>();
-        private readonly Dictionary<int, List<ZooWorker>> _workersOnPatrolByZone = new Dictionary<int, List<ZooWorker>>();
+        private readonly Dictionary<int, List<ZooWorker>> _workersByZone;// = new Dictionary<int, List<ZooWorker>>();
+        private readonly Dictionary<int, List<ZooWorker>> _workersOnPatrolByZone;// = new Dictionary<int, List<ZooWorker>>();
         private readonly List<ZooWorker> _workersStandBy = new List<ZooWorker>();
         private readonly Random _random = new Random();
         private bool _isPatrolling = false;
 
+        
         public StaffPatrol()
         {
             //_zoo = zoo;
@@ -29,6 +30,7 @@ namespace CSharp_Zoo
             {
                 _workersByZone[i] = new List<ZooWorker>();
                 _workersOnPatrolByZone[i] = new List<ZooWorker>();
+                //_zones = Enum.GetValues(typeof(ZoneTypes)).Cast<ZoneTypes>().Where(z => z != ZoneTypes.None).ToList();
             }
         }
 
