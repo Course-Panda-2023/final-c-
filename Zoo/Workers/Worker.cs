@@ -33,7 +33,6 @@ namespace Zoo
         public void SetWorkTimes(bool isBonus)
         {
             Random rnd = new Random();
-            //const int numOfAreas = 4;
             int numOfAreasToWork = 4;
             if (isBonus)
             {

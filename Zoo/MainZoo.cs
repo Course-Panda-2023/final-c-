@@ -39,8 +39,8 @@ namespace Zoo
                 workersDictFinish = new Dictionary<int, List<Worker>>();
                 tours = new List<Tour>();
                 AddWorkersToDicts();
-                zooEvents += new notify(PrintStartAndFinish);
                 zooEvents += new notify(AddAndRemoveTours);
+                zooEvents += new notify(PrintStartAndFinish);
                 zooIncome = 0;
                 Manager.LogEvents("Zoo created.");
             }
@@ -133,11 +133,11 @@ namespace Zoo
                     if (IsAreaFree(t.Area) && t.IsPaused)
                     {
                         t.ResumeTour(time);
-                        //Thread.Sleep(50);
                     }
                 }
             }
             if (workersDictStart.ContainsKey(time))
+            {
                 foreach (Worker w in workersDictStart[time])
                 {
                     Manager.LogEvents($"Worker {w.GetType().Name + (workers.IndexOf(w) + 1)} started working at {w.CurrentArea}");
@@ -153,10 +153,10 @@ namespace Zoo
                         if (t.Area == w.CurrentArea && !t.IsPaused && !(w is Feader))
                         {
                             t.PauseTour(time, w);
-                            //Thread.Sleep(50);
                         }
                     }
                 }
+            }
         }
 
         public bool IsAreaFree(Areas area)
@@ -170,6 +170,7 @@ namespace Zoo
             }
             return true;
         }
+
         public Animal GetNextAnimal(Areas area)
         {
             Random r = new Random();
@@ -264,8 +265,15 @@ namespace Zoo
             {
                 time = i + 1;
                 Manager.LogEvents($"time: {i + 1}");
-                zooEvents.Invoke(i + 1);
-                Thread.Sleep(100);
+                try
+                {
+                    zooEvents.Invoke(i + 1);
+                }
+                catch (NullReferenceException e) 
+                {
+                    return;
+                }
+                Thread.Sleep(1000);
                 Manager.LogEvents("");
             }
             foreach (Tour tour in tours)

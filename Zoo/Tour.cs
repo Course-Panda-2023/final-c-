@@ -22,7 +22,6 @@ namespace Zoo
         private int id;
         private Thread t;
         private static readonly EventWaitHandle resetEvent = new ManualResetEvent(initialState: true);
-        //private ManualResetEvent resetEvent = new ManualResetEvent(false);
 
         public Thread T { get { return t; } }
         public Areas Area { get { return area; } }
@@ -49,12 +48,10 @@ namespace Zoo
             Manager.LogEvents($"Tour {id} started in area {area} at time: {tourTime}.");
             for(int i = 0; i < tourInterval; i++)
             {
-                //this.resetEvent.WaitOne(Timeout.Infinite);
                 resetEvent.WaitOne();
-                Thread.Sleep(100);
-                //Console.WriteLine($"\nTour {id} {tourTime + i} || {MainZoo.time}.");
+                Thread.Sleep(1000);
             }
-            Manager.LogEvents($"Tour {id} ended in area {area} at time: {tourTime + 10} || {MainZoo.time}.");
+            Manager.LogEvents($"Tour {id} ended in area {area} at time: {tourTime + 10}.");
             isDone = true;
         }
 
