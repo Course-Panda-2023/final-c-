@@ -1,0 +1,19 @@
+﻿using Zoo.Util.Enum;
+
+namespace Zoo.Model.Animals.Bird
+{
+    internal sealed  class Owl : BirdAnimal
+    {
+        private readonly string Sound = "CheeCheee";
+
+        public Owl()
+        {
+            AnimalType = AnimalType.Owl;
+        }
+
+        public override void MakeSound()
+        {
+            Console.WriteLine($"Race: {RaceName}. \tOwl make sound {Sound}");
+        }
+    }
+}
