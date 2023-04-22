@@ -1,5 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
+using CSharp_Zoo;
 using CSharp_Zoo.Animals;
 using CSharp_Zoo.Animals.AerialZone;
 using CSharp_Zoo.Animals.AquaticZone;

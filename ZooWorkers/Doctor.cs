@@ -13,6 +13,8 @@ namespace CSharp_Zoo.ZooWorkers
 
         public override void TreatAnimal()
         {
+            
+
             if (CurrentAnimal.WorkedBy == null)
             {
                 CurrentAnimal.WorkedBy = this;

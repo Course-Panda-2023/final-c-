@@ -47,10 +47,10 @@ namespace CSharp_Zoo
             return _currentWorkerZones[worker];
         }*/
 
-        private void ScheduleWorkers()
+        private void ScheduleWorkers(TimeSpan day, DateTime startTime)
         {
-            TimeSpan day = TimeSpan.FromMinutes(2);
-            DateTime startTime = DateTime.Now;
+            //TimeSpan day = TimeSpan.FromMinutes(2);
+            //DateTime startTime = DateTime.Now;
 
             while (DateTime.Now < startTime + day)
             {
@@ -61,6 +61,7 @@ namespace CSharp_Zoo
                     while (zonesToVisit.Count > 0)
                     {
                         ZoneTypes zone = zonesToVisit[_random.Next(0, zonesToVisit.Count)];
+                        worker.Zone = zone;
                         _currentWorkerZones[worker] = zone;
                         zonesToVisit.Remove(zone);
 
@@ -98,7 +99,7 @@ namespace CSharp_Zoo
             var day = TimeSpan.FromMinutes(2);
             var endTime = DateTime.Now + day;
 
-            ScheduleWorkers();
+            ScheduleWorkers(day, endTime);
 
             while (DateTime.Now < endTime)
             {
@@ -140,6 +141,14 @@ namespace CSharp_Zoo
                 {
                     return false;
                 }
+
+                foreach (var worker in _zoo.Workers)
+                {
+                    if (_currentWorkerZones.TryGetValue(worker, out var workerZone) && workerZone == zone)
+                    {
+                        return false;
+                    }
+                }
             }
 
             return _activeTours.Count(x => x.Zone == zone) < 2;
@@ -166,6 +175,11 @@ namespace CSharp_Zoo
 
             ThreadPool.QueueUserWorkItem(_ =>
             {
+                /*while (_zoo.Workers.Any(w => _currentWorkerZones.ContainsKey(w) && _currentWorkerZones[w] == zone && w.Working))
+                {
+                    Thread.Sleep(100);
+                }
+                */
                 Thread.Sleep(TimeSpan.FromSeconds(10));
                 tour.EndTime = DateTime.Now;
                 _activeTours.Remove(tour);
