@@ -26,6 +26,13 @@ namespace CSharp_Zoo.Zoo
             }
         }
 
+        public void AssignRandomAnimalToWorkers()
+        {
+            foreach (var worker in _workers)
+            {
+                worker.CurrentAnimal = _animals[new Random().Next(0, _animals.Count)];
+            }
+        }
         /*public Zoo(List<Animal> animals, List<ZooWorker> workers, Director director, List<Animal> animals, List<ZooWorker> workers, Director director)
         {
             Animals = animals;

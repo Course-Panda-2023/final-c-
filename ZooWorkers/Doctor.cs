@@ -1,4 +1,5 @@
 ﻿using CSharp_Zoo.Animals;
+using CSharp_Zoo.Zoo;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +14,7 @@ namespace CSharp_Zoo.ZooWorkers
 
         public override void TreatAnimal()
         {
-            
+            //var animalsInZone = _zoo.Animals.Where(a => a.Zone == Zone).ToList();
 
             if (CurrentAnimal.WorkedBy == null)
             {
