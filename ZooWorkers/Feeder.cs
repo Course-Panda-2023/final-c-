@@ -15,15 +15,17 @@ namespace CSharp_Zoo.ZooWorkers
         public override int WorkingTime() => _workingTime;
         public override ZooPositions GetPosition() => ZooPositions.Feeder;
 
-        public override void TreatAnimal(Animal animal)
+        public override void TreatAnimal()
         {
-            if (animal.WorkedBy == null)
+            if (CurrentAnimal.WorkedBy == null)
             {
-                animal.WorkedBy = this;
+                CurrentAnimal.WorkedBy = this;
+                OnWorkStarted();
                 //Treating...
                 Thread.Sleep(300);
                 Console.WriteLine("Treated");
-                animal.WorkedBy = null;
+                CurrentAnimal.WorkedBy = null;
+                OnWorkFinished();
             }
             else
             {

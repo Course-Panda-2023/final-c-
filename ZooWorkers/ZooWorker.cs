@@ -21,7 +21,7 @@ namespace CSharp_Zoo.ZooWorkers
         public  ZoneTypes Zone { get; set; }
         public abstract int WorkingTime();
         public abstract ZooPositions GetPosition();
-        public abstract void TreatAnimal(Animal animal);
+        public abstract void TreatAnimal();
 
         protected virtual void OnWorkStarted()
         {

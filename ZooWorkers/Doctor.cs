@@ -11,15 +11,15 @@ namespace CSharp_Zoo.ZooWorkers
     {
         private const int _workingTime = 5;
 
-        public override void TreatAnimal(Animal animal)
+        public override void TreatAnimal()
         {
-            if (animal.WorkedBy == null)
+            if (CurrentAnimal.WorkedBy == null)
             {
-                animal.WorkedBy = this;
+                CurrentAnimal.WorkedBy = this;
                 //Treating...
                 Thread.Sleep(300);
                 Console.WriteLine("Treated");
-                animal.WorkedBy = null;
+                CurrentAnimal.WorkedBy = null;
             }
             else
             {

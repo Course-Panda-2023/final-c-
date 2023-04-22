@@ -30,6 +30,49 @@ namespace CSharp_Zoo
         private List<Visitors> _waitingVisitors;
         private Random _random;
         private Dictionary<ZooWorker, ZoneTypes> _currentWorkerZones;
+        /*private ZoneTypes GetNextZoneForWorker(ZooWorker worker)
+        {
+            if (!_currentWorkerZones.ContainsKey(worker))
+            {
+                var availableZones = Enum.GetValues(typeof(ZoneTypes)).Cast<ZoneTypes>().ToList();
+                availableZones.RemoveAll(zone => _currentWorkerZones.Values.Contains(zone));
+                _currentWorkerZones[worker] = availableZones[_random.Next(0, availableZones.Count)];
+            }
+            else
+            {
+                var currentZone = _currentWorkerZones[worker];
+                var nextZone = (ZoneTypes)(((int)currentZone + 1) % Enum.GetValues(typeof(ZoneTypes)).Length);
+                _currentWorkerZones[worker] = nextZone;
+            }
+            return _currentWorkerZones[worker];
+        }*/
+
+        private void ScheduleWorkers()
+        {
+            TimeSpan day = TimeSpan.FromMinutes(2);
+            DateTime startTime = DateTime.Now;
+
+            while (DateTime.Now < startTime + day)
+            {
+                foreach (var worker in _zoo.Workers)
+                {
+                    List<ZoneTypes> zonesToVisit = Enum.GetValues(typeof(ZoneTypes)).Cast<ZoneTypes>().ToList();
+
+                    while (zonesToVisit.Count > 0)
+                    {
+                        ZoneTypes zone = zonesToVisit[_random.Next(0, zonesToVisit.Count)];
+                        _currentWorkerZones[worker] = zone;
+                        zonesToVisit.Remove(zone);
+
+                        Console.WriteLine($"Worker {worker.GetPosition()} arrived at zone {zone} at {DateTime.Now}");
+                        worker.TreatAnimal();
+                        double randomTime = _random.NextDouble() * day.TotalMilliseconds / Enum.GetValues(typeof(ZoneTypes)).Length;
+                        TimeSpan timeToNextZone = TimeSpan.FromMilliseconds(randomTime);
+                        Thread.Sleep(timeToNextZone);
+                    }
+                }
+            }
+        }
 
         public event EventHandler<TourEventArgs> TourStarted;
         public event EventHandler<TourEventArgs> TourFinished;
@@ -51,13 +94,15 @@ namespace CSharp_Zoo
 
         public void Run()
         {
-            // Simulate 1 day (2 minutes)
+            
             var day = TimeSpan.FromMinutes(2);
             var endTime = DateTime.Now + day;
 
+            ScheduleWorkers();
+
             while (DateTime.Now < endTime)
             {
-                // Simulate tour (10 seconds)
+                
                 Thread.Sleep(TimeSpan.FromSeconds(10));
 
                 if (_waitingVisitors.Count >= 5)

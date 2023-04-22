@@ -14,7 +14,7 @@ namespace CSharp_Zoo.ZooWorkers
         public override int WorkingTime() => _workingTime;
         public override ZooPositions GetPosition() => ZooPositions.Cleaner;
 
-        public override void TreatAnimal(Animal animal)
+        public override void TreatAnimal()
         {
             return;
         }
