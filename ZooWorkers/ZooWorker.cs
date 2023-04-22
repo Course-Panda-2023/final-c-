@@ -10,8 +10,8 @@ namespace CSharp_Zoo.ZooWorkers
     public abstract class ZooWorker
     {
         public delegate void PatrolHandler(ZooWorker worker, int zone);
-        public event PatrolHandler OnStartPatrol;
-        public event PatrolHandler OnFinishPatrol;
+        public event EventHandler<WorkerEventArgs> WorkStarted;
+        public event EventHandler<WorkerEventArgs> WorkFinished;
 
         private ZoneTypes _zone;
         private Animal _currentAnimal;
@@ -23,14 +23,26 @@ namespace CSharp_Zoo.ZooWorkers
         public abstract ZooPositions GetPosition();
         public abstract void TreatAnimal(Animal animal);
 
-        public void StartPatrol(int zone)
+        protected virtual void OnWorkStarted()
         {
-            OnStartPatrol?.Invoke(this, zone);
+            WorkStarted?.Invoke(this, new WorkerEventArgs(this, DateTime.Now));
+        }
+        protected virtual void OnWorkFinished()
+        {
+            WorkFinished?.Invoke(this, new WorkerEventArgs(this, DateTime.Now));
         }
 
-        public void FinishPatrol(int zone)
+
+    }
+    public class WorkerEventArgs : EventArgs
+    {
+        public ZooWorker Worker { get; set; }
+        public DateTime Timestamp { get; set; }
+
+        public WorkerEventArgs(ZooWorker worker, DateTime timestamp)
         {
-            OnFinishPatrol?.Invoke(this, zone);
+            Worker = worker;
+            Timestamp = timestamp;
         }
     }
 }

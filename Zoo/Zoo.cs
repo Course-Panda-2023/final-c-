@@ -13,10 +13,18 @@ namespace CSharp_Zoo.Zoo
         private List<Animal> _animals;
         private List<ZooWorker> _workers;
         private Director _director;
-
+        private List<Visitors> zooVisitorList = new List<Visitors>();
         public List<Animal> Animals { get; set; }
         public List<ZooWorker> Workers { get; set; }
         public Director Director { get; set; }
+
+        public void AddVisitors(in int visitorsNum)
+        {
+            for (int i = 0; i < visitorsNum; i++)
+            {
+                zooVisitorList.Add(new Visitors());
+            }
+        }
 
         /*public Zoo(List<Animal> animals, List<ZooWorker> workers, Director director, List<Animal> animals, List<ZooWorker> workers, Director director)
         {
