@@ -10,7 +10,7 @@ namespace CSharp_Zoo.ZooWorkers
 {
     public class Doctor : ZooWorker
     {
-        private const int _workingTime = 5;
+        private const int _workingTime = 500; //ms
 
         public override void TreatAnimal()
         {
@@ -20,7 +20,7 @@ namespace CSharp_Zoo.ZooWorkers
             {
                 CurrentAnimal.WorkedBy = this;
                 //Treating...
-                Thread.Sleep(300);
+                Thread.Sleep(_workingTime);
                 Console.WriteLine("Treated");
                 CurrentAnimal.WorkedBy = null;
             }

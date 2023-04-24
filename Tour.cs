@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -30,23 +31,8 @@ namespace CSharp_Zoo
         private List<Visitors> _waitingVisitors;
         private Random _random;
         private Dictionary<ZooWorker, ZoneTypes> _currentWorkerZones;
-        /*private ZoneTypes GetNextZoneForWorker(ZooWorker worker)
-        {
-            if (!_currentWorkerZones.ContainsKey(worker))
-            {
-                var availableZones = Enum.GetValues(typeof(ZoneTypes)).Cast<ZoneTypes>().ToList();
-                availableZones.RemoveAll(zone => _currentWorkerZones.Values.Contains(zone));
-                _currentWorkerZones[worker] = availableZones[_random.Next(0, availableZones.Count)];
-            }
-            else
-            {
-                var currentZone = _currentWorkerZones[worker];
-                var nextZone = (ZoneTypes)(((int)currentZone + 1) % Enum.GetValues(typeof(ZoneTypes)).Length);
-                _currentWorkerZones[worker] = nextZone;
-            }
-            return _currentWorkerZones[worker];
-        }*/
-
+        private const int _dayLength = 2;
+        private const int _maxVisitorsNum = 5;
         private void ScheduleWorkers(TimeSpan day, DateTime startTime)
         {
             //TimeSpan day = TimeSpan.FromMinutes(2);
@@ -96,7 +82,7 @@ namespace CSharp_Zoo
         public void Run()
         {
             
-            var day = TimeSpan.FromMinutes(2);
+            var day = TimeSpan.FromMinutes(_dayLength);
             var endTime = DateTime.Now + day;
 
             ScheduleWorkers(day, endTime);
@@ -106,7 +92,7 @@ namespace CSharp_Zoo
                 
                 Thread.Sleep(TimeSpan.FromSeconds(10));
 
-                if (_waitingVisitors.Count >= 5)
+                if (_waitingVisitors.Count >= _maxVisitorsNum)
                 {
                     ZoneTypes zone = (ZoneTypes)_random.Next(0, Enum.GetValues(typeof(ZoneTypes)).Length);
                     StartTour(zone);
@@ -119,6 +105,14 @@ namespace CSharp_Zoo
             }
         }
 
+        private void AssignRandomAnimaltoWorker(ZooWorker worker)
+        {
+            var animalsInZone = _zoo.Animals.Where(a => a.Zone == worker.Zone).ToList();
+            if (animalsInZone.Count > 0)
+            {
+                worker.CurrentAnimal = animalsInZone[_random.Next(0, animalsInZone.Count)];
+            }
+        }
         private void AssignWorkerToRandomZone(ZooWorker worker)
         {
             if (!_currentWorkerZones.ContainsKey(worker))

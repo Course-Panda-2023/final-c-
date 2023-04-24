@@ -14,6 +14,7 @@ namespace CSharp_Zoo.Zoo
         private List<ZooWorker> _workers;
         private Director _director;
         private List<Visitors> zooVisitorList = new List<Visitors>();
+        
         public List<Animal> Animals { get; set; }
         public List<ZooWorker> Workers { get; set; }
         public Director Director { get; set; }
@@ -26,22 +27,14 @@ namespace CSharp_Zoo.Zoo
             }
         }
 
-        public void AssignRandomAnimalToWorkers()
+        /*public void AssignRandomAnimalToWorkers()
         {
             foreach (var worker in _workers)
             {
                 worker.CurrentAnimal = _animals[new Random().Next(0, _animals.Count)];
             }
-        }
-        /*public Zoo(List<Animal> animals, List<ZooWorker> workers, Director director, List<Animal> animals, List<ZooWorker> workers, Director director)
-        {
-            Animals = animals;
-            Workers = workers;
-            Director = director;
-            Animals = animals;
-            Workers = workers;
-            Director = director;
         }*/
+       
         public Zoo(Director director)
         {
             _animals = new List<Animal>();
@@ -63,11 +56,5 @@ namespace CSharp_Zoo.Zoo
                 _animals.Add(animal);
             }
         }
-        /*public void StartPatrol()
-        {
-            // start the patrol thread
-            Thread thread = new Thread(new ThreadStart(_staffPatrol.Patrol));
-            thread.Start();
-        }*/
     }
 }

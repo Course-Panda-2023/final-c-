@@ -12,11 +12,13 @@ namespace CSharp_Zoo.Animals
         private readonly string _name;
         private bool isAvailable = true;
         private ZooWorker _workedBy;
-        public Animal(string name)
+        protected ZoneTypes _zone;
+        public Animal(string name, ZoneTypes zone)
         {
             _name = name;
+            _zone = zone;
         }
-
+        public ZoneTypes Zone { get; set; }
         public ZooWorker WorkedBy { get; set; }
         public bool IsAvailable { get; set; }
         public string Name => _name;

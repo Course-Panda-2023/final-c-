@@ -9,8 +9,8 @@ namespace CSharp_Zoo.Animals.AerialZone
     public class AerialAnimal : Animal
     {
         
-        private const ZoneTypes _zone = ZoneTypes.Aerial;
-        public AerialAnimal(string name) : base(name) {}
+        //private const ZoneTypes _zone = ZoneTypes.Aerial;
+        public AerialAnimal(string name) : base(name, ZoneTypes.Aerial) {}
         
 
         

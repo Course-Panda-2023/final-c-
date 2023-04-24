@@ -9,8 +9,8 @@ namespace CSharp_Zoo.Animals.AerialZone
     public class GroundAnimal : Animal
     {
 
-        private const ZoneTypes _zone = ZoneTypes.Ground;
-        public GroundAnimal(string name) : base(name) { }
+        //private const ZoneTypes _zone = ZoneTypes.Ground;
+        public GroundAnimal(string name) : base(name, ZoneTypes.Ground) { }
 
         //public override void MakeSound() => Console.WriteLine(_sound);
         public override ZoneTypes GetZone() => _zone;

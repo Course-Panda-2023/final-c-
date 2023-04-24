@@ -9,7 +9,7 @@ namespace CSharp_Zoo.ZooWorkers
 {
     public class Feeder : ZooWorker
     {
-        private const int _workingTime = 10;
+        private const int _workingTime = 1000; //ms
         
 
         public override int WorkingTime() => _workingTime;
@@ -22,7 +22,7 @@ namespace CSharp_Zoo.ZooWorkers
                 CurrentAnimal.WorkedBy = this;
                 OnWorkStarted();
                 //Treating...
-                Thread.Sleep(300);
+                Thread.Sleep(_workingTime);
                 Console.WriteLine("Treated");
                 CurrentAnimal.WorkedBy = null;
                 OnWorkFinished();

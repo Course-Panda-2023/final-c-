@@ -9,7 +9,7 @@ namespace CSharp_Zoo.ZooWorkers
 {
     public abstract class ZooWorker
     {
-        public delegate void PatrolHandler(ZooWorker worker, int zone);
+        //public delegate void PatrolHandler(ZooWorker worker, int zone);
         public event EventHandler<WorkerEventArgs> WorkStarted;
         public event EventHandler<WorkerEventArgs> WorkFinished;
 
