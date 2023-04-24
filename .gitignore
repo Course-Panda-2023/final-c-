@@ -1,3 +1,4 @@
 logs/*.txt
 zoo/bin
 zoo/obj
+.DS_Store
