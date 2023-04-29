@@ -2,13 +2,13 @@
 
 using CSharp_Zoo;
 using CSharp_Zoo.Animals;
+using CSharp_Zoo.Zoo;
+using CSharp_Zoo.ZooWorkers;
+using System;
 using CSharp_Zoo.Animals.AerialZone;
 using CSharp_Zoo.Animals.AquaticZone;
 using CSharp_Zoo.Animals.GroundZone;
 using CSharp_Zoo.Animals.MixedZone;
-using CSharp_Zoo.Zoo;
-using CSharp_Zoo.ZooWorkers;
-using System;
 using Microsoft.Win32.SafeHandles;
 
 
@@ -38,12 +38,12 @@ zoo.AddAnimal(new PolarBear("Bearry"));
 zoo.AddAnimal(new Crocodile("Crocody"));
 zoo.AddAnimal(new Hippopotamus("Hippy"));
 
-const int numWorkers = 2; 
+const int numWorkers = 1; 
 for (int i = 0; i < numWorkers; i++)
 {
-    //zoo.AddWorker(new Doctor());
+    zoo.AddWorker(new Doctor());
     //zoo.AddWorker(new Feeder());
-    zoo.AddWorker(new Cleaner());
+    //zoo.AddWorker(new Cleaner());
 }
 
 if (zoo.Workers == null || zoo.Animals == null)
@@ -52,6 +52,10 @@ if (zoo.Workers == null || zoo.Animals == null)
 }
 //Console.WriteLine(zoo.Workers.Count);
 Tours tours = new Tours(zoo);
+/*foreach (var animal in zoo.Animals)
+{
+    Console.WriteLine(animal.Zone);
+}*/
 /*Task.Run(async () =>
 {
     var random = new Random();

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Dynamic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,7 +17,12 @@ namespace CSharp_Zoo.ZooWorkers
         private ZoneTypes _zone;
         private Animal _currentAnimal;
         private TimeSpan _workingTime;
+        private List<ZoneTypes> _zonesToVisit;
 
+       /* public ZooWorker()
+        {
+            _zonesToVisit = Enum.GetValues(typeof(ZoneTypes)).Cast<ZoneTypes>().ToList();
+        }*/
         public Animal CurrentAnimal { get => _currentAnimal; set => _currentAnimal = value; }
         public  ZoneTypes Zone { get; set; }
         public abstract int WorkingTime();

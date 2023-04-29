@@ -10,21 +10,21 @@ namespace CSharp_Zoo.Animals
     public abstract class Animal
     {
         private readonly string _name;
-        private bool isAvailable = true;
+        private bool isAvailable;
         private ZooWorker _workedBy;
-        protected ZoneTypes _zone;
+        private ZoneTypes _zone;
         public Animal(string name, ZoneTypes zone)
         {
             _name = name;
             _zone = zone;
+            isAvailable = true;
         }
-        public ZoneTypes Zone { get; set; }
+        public ZoneTypes Zone { get => _zone; set => _zone = value; }
         public ZooWorker WorkedBy { get; set; }
         public bool IsAvailable { get; set; }
         public string Name => _name;
-        public abstract ZoneTypes GetZone();
 
-        
+
         public abstract void MakeSound();
     }
 }

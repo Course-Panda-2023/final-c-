@@ -39,11 +39,11 @@ namespace CSharp_Zoo
             // TimeSpan day = TimeSpan.FromMinutes(2);
             // DateTime startTime = DateTime.Now;
 
-            List<ZoneTypes> zonesToVisit = Enum.GetValues(typeof(ZoneTypes)).Cast<ZoneTypes>().ToList();
+            List<ZoneTypes> zonesToVisit = Enum.GetValues(typeof(ZoneTypes)).Cast<ZoneTypes>().ToList(); //to put to the worker's constructor, such that it will be individual for every of them
 
             while (DateTime.Now < startTime + day && zonesToVisit.Count > 0)
             {
-                Console.WriteLine(startTime + day);
+                //Console.WriteLine(startTime + day);
                 foreach (var worker in _zoo.Workers)
                 {
                     if (zonesToVisit.Count > 0)
@@ -113,6 +113,7 @@ namespace CSharp_Zoo
         private void AssignRandomAnimaltoWorker(ZooWorker worker)
         {
             var animalsInZone = _zoo.Animals.Where(a => a.Zone == worker.Zone).ToList();
+            Console.WriteLine($"Num in zone: {animalsInZone.Count}");
             if (animalsInZone.Count > 0)
             {
                 worker.CurrentAnimal = animalsInZone[_random.Next(0, animalsInZone.Count)];

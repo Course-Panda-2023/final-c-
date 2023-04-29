@@ -4,17 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CSharp_Zoo.Animals.AerialZone
+namespace CSharp_Zoo.Animals.AquaticZone
 {
-    public class AquaticAnimal : Animal
-    {
+    public class AquaticAnimal : Animal {
 
-        //private const ZoneTypes _zone = ZoneTypes.Aquatic;
+        
         public AquaticAnimal(string name) : base(name, ZoneTypes.Aquatic) { }
 
-        //public override void MakeSound() => Console.WriteLine(_sound);
-        public override ZoneTypes GetZone() => _zone;
-
+       
         public override void MakeSound()
         {
             return;
