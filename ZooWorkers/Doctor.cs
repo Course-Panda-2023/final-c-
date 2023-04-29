@@ -15,19 +15,27 @@ namespace CSharp_Zoo.ZooWorkers
         public override void TreatAnimal()
         {
             //var animalsInZone = _zoo.Animals.Where(a => a.Zone == Zone).ToList();
+            /*if (CurrentAnimal == null)
+            {
+                Console.WriteLine("Ne s kem govoriti!");
+                return;
+            }*/
 
             if (CurrentAnimal.WorkedBy == null)
             {
                 CurrentAnimal.WorkedBy = this;
+                OnWorkStarted();
                 //Treating...
                 Thread.Sleep(_workingTime);
                 Console.WriteLine("Treated");
                 CurrentAnimal.WorkedBy = null;
+                OnWorkFinished();
             }
             else
             {
                 Console.WriteLine("Animal is already being worked on.");
             }
+            
         }
         public override int WorkingTime() => _workingTime;
         public override ZooPositions GetPosition() => ZooPositions.Doctor;

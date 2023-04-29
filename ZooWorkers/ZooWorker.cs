@@ -17,7 +17,7 @@ namespace CSharp_Zoo.ZooWorkers
         private Animal _currentAnimal;
         private TimeSpan _workingTime;
 
-        public  Animal CurrentAnimal { get; set; }
+        public Animal CurrentAnimal { get => _currentAnimal; set => _currentAnimal = value; }
         public  ZoneTypes Zone { get; set; }
         public abstract int WorkingTime();
         public abstract ZooPositions GetPosition();

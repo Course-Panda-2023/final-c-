@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.VisualBasic;
 
 namespace CSharp_Zoo
 {
@@ -31,20 +32,21 @@ namespace CSharp_Zoo
         private List<Visitors> _waitingVisitors;
         private Random _random;
         private Dictionary<ZooWorker, ZoneTypes> _currentWorkerZones;
-        private const int _dayLength = 2;
+        private const int _dayLength = 1;
         private const int _maxVisitorsNum = 5;
         private void ScheduleWorkers(TimeSpan day, DateTime startTime)
         {
-            //TimeSpan day = TimeSpan.FromMinutes(2);
-            //DateTime startTime = DateTime.Now;
+            // TimeSpan day = TimeSpan.FromMinutes(2);
+            // DateTime startTime = DateTime.Now;
 
-            while (DateTime.Now < startTime + day)
+            List<ZoneTypes> zonesToVisit = Enum.GetValues(typeof(ZoneTypes)).Cast<ZoneTypes>().ToList();
+
+            while (DateTime.Now < startTime + day && zonesToVisit.Count > 0)
             {
+                Console.WriteLine(startTime + day);
                 foreach (var worker in _zoo.Workers)
                 {
-                    List<ZoneTypes> zonesToVisit = Enum.GetValues(typeof(ZoneTypes)).Cast<ZoneTypes>().ToList();
-
-                    while (zonesToVisit.Count > 0)
+                    if (zonesToVisit.Count > 0)
                     {
                         ZoneTypes zone = zonesToVisit[_random.Next(0, zonesToVisit.Count)];
                         worker.Zone = zone;
@@ -52,6 +54,7 @@ namespace CSharp_Zoo
                         zonesToVisit.Remove(zone);
 
                         Console.WriteLine($"Worker {worker.GetPosition()} arrived at zone {zone} at {DateTime.Now}");
+                        AssignRandomAnimaltoWorker(worker);
                         worker.TreatAnimal();
                         double randomTime = _random.NextDouble() * day.TotalMilliseconds / Enum.GetValues(typeof(ZoneTypes)).Length;
                         TimeSpan timeToNextZone = TimeSpan.FromMilliseconds(randomTime);
@@ -72,6 +75,7 @@ namespace CSharp_Zoo
             _random = new Random();
             _currentWorkerZones = new Dictionary<ZooWorker, ZoneTypes>();
 
+            //check it
             foreach (var worker in _zoo.Workers)
             {
                 worker.WorkStarted += Worker_WorkStarted;
@@ -98,10 +102,11 @@ namespace CSharp_Zoo
                     StartTour(zone);
                 }
 
-                foreach (var worker in _zoo.Workers)
+                /*foreach (var worker in _zoo.Workers)
                 {
                     AssignWorkerToRandomZone(worker);
-                }
+                    AssignRandomAnimaltoWorker(worker);
+                }*/
             }
         }
 

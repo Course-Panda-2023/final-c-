@@ -11,39 +11,43 @@ namespace CSharp_Zoo.Zoo
     public class Zoo
     {
         private List<Animal> _animals;
-        private List<ZooWorker> _workers;
+        public List<ZooWorker> _workers;
         private Director _director;
-        private List<Visitors> zooVisitorList = new List<Visitors>();
-        
-        public List<Animal> Animals { get; set; }
-        public List<ZooWorker> Workers { get; set; }
-        public Director Director { get; set; }
+        private List<Visitors> _zooVisitorList;
+
+        public Zoo()
+        {
+            _animals = new List<Animal>();
+            _workers = new List<ZooWorker>();
+            _zooVisitorList = new List<Visitors>();
+        }
+
+        public List<Animal> Animals { get => _animals; set => _animals = value; }
+        public List<ZooWorker> Workers { get => _workers; set => _workers = value; }
+        public Director Director { get => _director; set => _director = value; }
+
 
         public void AddVisitors(in int visitorsNum)
         {
             for (int i = 0; i < visitorsNum; i++)
             {
-                zooVisitorList.Add(new Visitors());
+                _zooVisitorList.Add(new Visitors());
             }
         }
 
-        /*public void AssignRandomAnimalToWorkers()
+        public void AddDirector(Director director)
         {
-            foreach (var worker in _workers)
-            {
-                worker.CurrentAnimal = _animals[new Random().Next(0, _animals.Count)];
-            }
-        }*/
-       
-        public Zoo(Director director)
-        {
-            _animals = new List<Animal>();
-            _workers = new List<ZooWorker>();
-            _director = director;
+            Director = director;
         }
 
         public void AddWorker(ZooWorker worker)
         {
+            if (worker == null)
+            {
+                Console.WriteLine("Worker is null");
+                return;
+            }
+
             if (!_workers.Contains(worker))
             {
                 _workers.Add(worker);

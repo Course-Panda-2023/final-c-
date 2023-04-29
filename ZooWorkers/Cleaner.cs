@@ -16,7 +16,13 @@ namespace CSharp_Zoo.ZooWorkers
 
         public override void TreatAnimal()
         {
-            return;
+            //CurrentAnimal.WorkedBy = this;
+            OnWorkStarted();
+            //Treating...
+            //Thread.Sleep(_workingTime);
+            Console.WriteLine("Treated");
+            //CurrentAnimal.WorkedBy = null;
+            OnWorkFinished();
         }
     }
 }
